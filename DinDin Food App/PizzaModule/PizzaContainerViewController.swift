@@ -1,20 +1,19 @@
 //
-//  PromoOffersViewController.swift
+//  PizzaContainerViewController.swift
 //  DinDin Food App
 //
-//  Created by Babatunde Adewole on 11/18/20.
+//  Created by Babatunde Adewole on 11/19/20.
 //
 
 import UIKit
 
-class PromoOffersViewController: UIViewController {
+class PizzaContainerViewController: UIViewController {
 
-    @IBOutlet weak var label: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+
 }
