@@ -23,10 +23,17 @@
 		43D5B5CF256583FB00ECE161 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B5CE256583FB00ECE161 /* HomeInteractor.swift */; };
 		43D5B5DD256585B900ECE161 /* PromoOffersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B5DC256585B900ECE161 /* PromoOffersModel.swift */; };
 		43D5B5E5256586EF00ECE161 /* HomeModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B5E4256586EF00ECE161 /* HomeModuleBuilder.swift */; };
-		43D5B5ED256593E000ECE161 /* PromoOffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B5EC256593E000ECE161 /* PromoOffersViewController.swift */; };
-		43D5B5F52565B41300ECE161 /* PromoOffersDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B5F42565B41200ECE161 /* PromoOffersDataViewController.swift */; };
 		43D5B61F2565D86300ECE161 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B61E2565D86300ECE161 /* Constants.swift */; };
 		43D5B6242565E40800ECE161 /* PromoPackagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6232565E40800ECE161 /* PromoPackagesService.swift */; };
+		43D5B630256613E600ECE161 /* PizzaContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B62F256613E600ECE161 /* PizzaContainerViewController.swift */; };
+		43D5B6382566163B00ECE161 /* PizzaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6362566163B00ECE161 /* PizzaTableViewCell.swift */; };
+		43D5B6392566163B00ECE161 /* PizzaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D5B6372566163B00ECE161 /* PizzaTableViewCell.xib */; };
+		43D5B640256618E100ECE161 /* PizzaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B63F256618E100ECE161 /* PizzaModel.swift */; };
+		43D5B6482566198300ECE161 /* PizzaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6472566198300ECE161 /* PizzaViewModel.swift */; };
+		43D5B64E256619D100ECE161 /* PizzaViewModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B64D256619D100ECE161 /* PizzaViewModelController.swift */; };
+		43D5B65B25661FA300ECE161 /* PizzaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B65A25661FA300ECE161 /* PizzaPresenter.swift */; };
+		43D5B6602566200400ECE161 /* PizzaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B65F2566200400ECE161 /* PizzaRouter.swift */; };
+		43D5B6652566203E00ECE161 /* PizzaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6642566203E00ECE161 /* PizzaInteractor.swift */; };
 		5D0814C63A4C345D26BDC994 /* Pods_DinDin_Food_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DD86915F725EA975A9D9F4 /* Pods_DinDin_Food_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,10 +77,17 @@
 		43D5B5CE256583FB00ECE161 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		43D5B5DC256585B900ECE161 /* PromoOffersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoOffersModel.swift; sourceTree = "<group>"; };
 		43D5B5E4256586EF00ECE161 /* HomeModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleBuilder.swift; sourceTree = "<group>"; };
-		43D5B5EC256593E000ECE161 /* PromoOffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoOffersViewController.swift; sourceTree = "<group>"; };
-		43D5B5F42565B41200ECE161 /* PromoOffersDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoOffersDataViewController.swift; sourceTree = "<group>"; };
 		43D5B61E2565D86300ECE161 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		43D5B6232565E40800ECE161 /* PromoPackagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoPackagesService.swift; sourceTree = "<group>"; };
+		43D5B62F256613E600ECE161 /* PizzaContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaContainerViewController.swift; sourceTree = "<group>"; };
+		43D5B6362566163B00ECE161 /* PizzaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaTableViewCell.swift; sourceTree = "<group>"; };
+		43D5B6372566163B00ECE161 /* PizzaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PizzaTableViewCell.xib; sourceTree = "<group>"; };
+		43D5B63F256618E100ECE161 /* PizzaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaModel.swift; sourceTree = "<group>"; };
+		43D5B6472566198300ECE161 /* PizzaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaViewModel.swift; sourceTree = "<group>"; };
+		43D5B64D256619D100ECE161 /* PizzaViewModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaViewModelController.swift; sourceTree = "<group>"; };
+		43D5B65A25661FA300ECE161 /* PizzaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaPresenter.swift; sourceTree = "<group>"; };
+		43D5B65F2566200400ECE161 /* PizzaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaRouter.swift; sourceTree = "<group>"; };
+		43D5B6642566203E00ECE161 /* PizzaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaInteractor.swift; sourceTree = "<group>"; };
 		4D430E68FB8FDD91579268C2 /* Pods_DinDin_Food_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DinDin_Food_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B237F0554F7F05DF60D8815 /* Pods-DinDin Food App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDin Food App.release.xcconfig"; path = "Target Support Files/Pods-DinDin Food App/Pods-DinDin Food App.release.xcconfig"; sourceTree = "<group>"; };
 		8BA46AF3B4ACD9ED6D4EA88C /* Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig"; path = "Target Support Files/Pods-DinDin Food App-DinDin Food AppUITests/Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +150,7 @@
 		43D5B57C2565441500ECE161 /* DinDin Food App */ = {
 			isa = PBXGroup;
 			children = (
+				43D5B6342566160600ECE161 /* PizzaModule */,
 				43D5B61D2565D84A00ECE161 /* EnvironmentVariables */,
 				43D5B61C2565D83800ECE161 /* HttpServices */,
 				43D5B5DB256584F300ECE161 /* Entity */,
@@ -173,7 +188,6 @@
 		43D5B5B325654E4100ECE161 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				43D5B5F42565B41200ECE161 /* PromoOffersDataViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -186,7 +200,6 @@
 				43D5B5C9256583A100ECE161 /* HomeRouter.swift */,
 				43D5B5CE256583FB00ECE161 /* HomeInteractor.swift */,
 				43D5B5E4256586EF00ECE161 /* HomeModuleBuilder.swift */,
-				43D5B5EC256593E000ECE161 /* PromoOffersViewController.swift */,
 			);
 			path = HomeModule;
 			sourceTree = "<group>";
@@ -213,6 +226,54 @@
 				43D5B61E2565D86300ECE161 /* Constants.swift */,
 			);
 			path = EnvironmentVariables;
+			sourceTree = "<group>";
+		};
+		43D5B6342566160600ECE161 /* PizzaModule */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B64C256619B800ECE161 /* PizzaViewModelController */,
+				43D5B63E256618CF00ECE161 /* PizzaViewModel */,
+				43D5B63D256618C400ECE161 /* PizzaModel */,
+				43D5B6352566162000ECE161 /* PizzaViews */,
+				43D5B62F256613E600ECE161 /* PizzaContainerViewController.swift */,
+				43D5B65A25661FA300ECE161 /* PizzaPresenter.swift */,
+				43D5B65F2566200400ECE161 /* PizzaRouter.swift */,
+				43D5B6642566203E00ECE161 /* PizzaInteractor.swift */,
+			);
+			path = PizzaModule;
+			sourceTree = "<group>";
+		};
+		43D5B6352566162000ECE161 /* PizzaViews */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B6362566163B00ECE161 /* PizzaTableViewCell.swift */,
+				43D5B6372566163B00ECE161 /* PizzaTableViewCell.xib */,
+			);
+			path = PizzaViews;
+			sourceTree = "<group>";
+		};
+		43D5B63D256618C400ECE161 /* PizzaModel */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B63F256618E100ECE161 /* PizzaModel.swift */,
+			);
+			path = PizzaModel;
+			sourceTree = "<group>";
+		};
+		43D5B63E256618CF00ECE161 /* PizzaViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B6472566198300ECE161 /* PizzaViewModel.swift */,
+			);
+			path = PizzaViewModel;
+			sourceTree = "<group>";
+		};
+		43D5B64C256619B800ECE161 /* PizzaViewModelController */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B64D256619D100ECE161 /* PizzaViewModelController.swift */,
+			);
+			path = PizzaViewModelController;
 			sourceTree = "<group>";
 		};
 		5AAE4BC493EE0E2C5A54B03D /* Frameworks */ = {
@@ -346,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D5B6392566163B00ECE161 /* PizzaTableViewCell.xib in Resources */,
 				43D5B58A2565441A00ECE161 /* LaunchScreen.storyboard in Resources */,
 				43D5B5872565441A00ECE161 /* Assets.xcassets in Resources */,
 				43D5B5852565441500ECE161 /* Main.storyboard in Resources */,
@@ -477,18 +539,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				43D5B5822565441500ECE161 /* ViewController.swift in Sources */,
+				43D5B6602566200400ECE161 /* PizzaRouter.swift in Sources */,
 				43D5B5CA256583A100ECE161 /* HomeRouter.swift in Sources */,
+				43D5B640256618E100ECE161 /* PizzaModel.swift in Sources */,
 				43D5B5DD256585B900ECE161 /* PromoOffersModel.swift in Sources */,
+				43D5B64E256619D100ECE161 /* PizzaViewModelController.swift in Sources */,
 				43D5B5E5256586EF00ECE161 /* HomeModuleBuilder.swift in Sources */,
 				43D5B57E2565441500ECE161 /* AppDelegate.swift in Sources */,
-				43D5B5F52565B41300ECE161 /* PromoOffersDataViewController.swift in Sources */,
 				43D5B5802565441500ECE161 /* SceneDelegate.swift in Sources */,
+				43D5B6382566163B00ECE161 /* PizzaTableViewCell.swift in Sources */,
 				43D5B5C5256582D000ECE161 /* HomePresenter.swift in Sources */,
-				43D5B5ED256593E000ECE161 /* PromoOffersViewController.swift in Sources */,
+				43D5B6482566198300ECE161 /* PizzaViewModel.swift in Sources */,
+				43D5B6652566203E00ECE161 /* PizzaInteractor.swift in Sources */,
 				43D5B5BF25657D5D00ECE161 /* HomeViewController.swift in Sources */,
+				43D5B65B25661FA300ECE161 /* PizzaPresenter.swift in Sources */,
 				43D5B5CF256583FB00ECE161 /* HomeInteractor.swift in Sources */,
 				43D5B6242565E40800ECE161 /* PromoPackagesService.swift in Sources */,
 				43D5B61F2565D86300ECE161 /* Constants.swift in Sources */,
+				43D5B630256613E600ECE161 /* PizzaContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

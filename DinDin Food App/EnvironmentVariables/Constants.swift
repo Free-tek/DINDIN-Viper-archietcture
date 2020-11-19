@@ -10,8 +10,9 @@ import Foundation
 struct Constants {
     struct  Endpoints {
         static let baseUrl = "https://blitzdocker-container-uw7t7lrqtq-uc.a.run.app"
-        static let getPromoBannerImagesExt = "/getPromo"
-        static let getPromoBannerImages = "https://blitzdocker-container-uw7t7lrqtq-uc.a.run.app/getPromo"
+        static let getPromoBannerImages = "/getPromDinDinn"
+        static let fetchFoodList = "/getFoodListDinDinn"
+        
     }
     
 }

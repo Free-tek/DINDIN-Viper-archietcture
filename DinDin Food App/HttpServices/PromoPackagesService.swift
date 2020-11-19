@@ -65,7 +65,7 @@ enum PromoPackageService{
         var path: String{
             switch self{
             case .getPromoBannerImages:
-                return Constants.Endpoints.getPromoBannerImagesExt
+                return Constants.Endpoints.getPromoBannerImages
                 
             }
         }
