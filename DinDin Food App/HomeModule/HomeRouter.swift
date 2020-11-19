@@ -4,13 +4,18 @@
 //
 //  Created by Babatunde Adewole on 11/18/20.
 //
-
-import Foundation
+import UIKit
 
 protocol HomeRouting{
     
 }
 class HomeRouter {
+    
+    var viewController: UIViewController
+    init(viewController: UIViewController){
+        self.viewController = viewController
+        
+    }
     
 }
 extension HomeRouter: HomeRouting{

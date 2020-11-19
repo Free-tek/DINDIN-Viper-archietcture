@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0270FB46BDF625A19626F23A /* Pods_DinDin_Food_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D430E68FB8FDD91579268C2 /* Pods_DinDin_Food_AppTests.framework */; };
+		1134011429E1E9B3015851BD /* Pods_DinDin_Food_App_DinDin_Food_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379E081E7ADA8BA1478FFEE0 /* Pods_DinDin_Food_App_DinDin_Food_AppUITests.framework */; };
 		43D5B57E2565441500ECE161 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B57D2565441500ECE161 /* AppDelegate.swift */; };
 		43D5B5802565441500ECE161 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B57F2565441500ECE161 /* SceneDelegate.swift */; };
 		43D5B5822565441500ECE161 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B5812565441500ECE161 /* ViewController.swift */; };
@@ -19,6 +21,13 @@
 		43D5B5C5256582D000ECE161 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B5C4256582D000ECE161 /* HomePresenter.swift */; };
 		43D5B5CA256583A100ECE161 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B5C9256583A100ECE161 /* HomeRouter.swift */; };
 		43D5B5CF256583FB00ECE161 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B5CE256583FB00ECE161 /* HomeInteractor.swift */; };
+		43D5B5DD256585B900ECE161 /* PromoOffersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B5DC256585B900ECE161 /* PromoOffersModel.swift */; };
+		43D5B5E5256586EF00ECE161 /* HomeModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B5E4256586EF00ECE161 /* HomeModuleBuilder.swift */; };
+		43D5B5ED256593E000ECE161 /* PromoOffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B5EC256593E000ECE161 /* PromoOffersViewController.swift */; };
+		43D5B5F52565B41300ECE161 /* PromoOffersDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B5F42565B41200ECE161 /* PromoOffersDataViewController.swift */; };
+		43D5B61F2565D86300ECE161 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B61E2565D86300ECE161 /* Constants.swift */; };
+		43D5B6242565E40800ECE161 /* PromoPackagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6232565E40800ECE161 /* PromoPackagesService.swift */; };
+		5D0814C63A4C345D26BDC994 /* Pods_DinDin_Food_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DD86915F725EA975A9D9F4 /* Pods_DinDin_Food_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CD50CF26FEC8C3D83F65864 /* Pods-DinDin Food AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDin Food AppTests.debug.xcconfig"; path = "Target Support Files/Pods-DinDin Food AppTests/Pods-DinDin Food AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		379E081E7ADA8BA1478FFEE0 /* Pods_DinDin_Food_App_DinDin_Food_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DinDin_Food_App_DinDin_Food_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D5B57A2565441500ECE161 /* DinDin Food App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DinDin Food App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D5B57D2565441500ECE161 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43D5B57F2565441500ECE161 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +68,19 @@
 		43D5B5C4256582D000ECE161 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		43D5B5C9256583A100ECE161 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		43D5B5CE256583FB00ECE161 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		43D5B5DC256585B900ECE161 /* PromoOffersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoOffersModel.swift; sourceTree = "<group>"; };
+		43D5B5E4256586EF00ECE161 /* HomeModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleBuilder.swift; sourceTree = "<group>"; };
+		43D5B5EC256593E000ECE161 /* PromoOffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoOffersViewController.swift; sourceTree = "<group>"; };
+		43D5B5F42565B41200ECE161 /* PromoOffersDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoOffersDataViewController.swift; sourceTree = "<group>"; };
+		43D5B61E2565D86300ECE161 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		43D5B6232565E40800ECE161 /* PromoPackagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoPackagesService.swift; sourceTree = "<group>"; };
+		4D430E68FB8FDD91579268C2 /* Pods_DinDin_Food_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DinDin_Food_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B237F0554F7F05DF60D8815 /* Pods-DinDin Food App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDin Food App.release.xcconfig"; path = "Target Support Files/Pods-DinDin Food App/Pods-DinDin Food App.release.xcconfig"; sourceTree = "<group>"; };
+		8BA46AF3B4ACD9ED6D4EA88C /* Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig"; path = "Target Support Files/Pods-DinDin Food App-DinDin Food AppUITests/Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8EEE048429ABCB4DDAAA9020 /* Pods-DinDin Food App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDin Food App.debug.xcconfig"; path = "Target Support Files/Pods-DinDin Food App/Pods-DinDin Food App.debug.xcconfig"; sourceTree = "<group>"; };
+		D4DD86915F725EA975A9D9F4 /* Pods_DinDin_Food_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DinDin_Food_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D784D7D55F8467D870F5FA25 /* Pods-DinDin Food AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDin Food AppTests.release.xcconfig"; path = "Target Support Files/Pods-DinDin Food AppTests/Pods-DinDin Food AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		FDAA1937B600D8F4B10BDF78 /* Pods-DinDin Food App-DinDin Food AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDin Food App-DinDin Food AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-DinDin Food App-DinDin Food AppUITests/Pods-DinDin Food App-DinDin Food AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D0814C63A4C345D26BDC994 /* Pods_DinDin_Food_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0270FB46BDF625A19626F23A /* Pods_DinDin_Food_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1134011429E1E9B3015851BD /* Pods_DinDin_Food_App_DinDin_Food_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +118,8 @@
 				43D5B5932565441A00ECE161 /* DinDin Food AppTests */,
 				43D5B59E2565441A00ECE161 /* DinDin Food AppUITests */,
 				43D5B57B2565441500ECE161 /* Products */,
+				D6970484CFEF3DEDB59180A0 /* Pods */,
+				5AAE4BC493EE0E2C5A54B03D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,7 +136,9 @@
 		43D5B57C2565441500ECE161 /* DinDin Food App */ = {
 			isa = PBXGroup;
 			children = (
-				43D5B5DB256584F300ECE161 /* Models */,
+				43D5B61D2565D84A00ECE161 /* EnvironmentVariables */,
+				43D5B61C2565D83800ECE161 /* HttpServices */,
+				43D5B5DB256584F300ECE161 /* Entity */,
 				43D5B5C32565822700ECE161 /* HomeModule */,
 				43D5B5B325654E4100ECE161 /* ViewControllers */,
 				43D5B57D2565441500ECE161 /* AppDelegate.swift */,
@@ -142,6 +173,7 @@
 		43D5B5B325654E4100ECE161 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				43D5B5F42565B41200ECE161 /* PromoOffersDataViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -153,15 +185,57 @@
 				43D5B5C4256582D000ECE161 /* HomePresenter.swift */,
 				43D5B5C9256583A100ECE161 /* HomeRouter.swift */,
 				43D5B5CE256583FB00ECE161 /* HomeInteractor.swift */,
+				43D5B5E4256586EF00ECE161 /* HomeModuleBuilder.swift */,
+				43D5B5EC256593E000ECE161 /* PromoOffersViewController.swift */,
 			);
 			path = HomeModule;
 			sourceTree = "<group>";
 		};
-		43D5B5DB256584F300ECE161 /* Models */ = {
+		43D5B5DB256584F300ECE161 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				43D5B5DC256585B900ECE161 /* PromoOffersModel.swift */,
 			);
-			path = Models;
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		43D5B61C2565D83800ECE161 /* HttpServices */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B6232565E40800ECE161 /* PromoPackagesService.swift */,
+			);
+			path = HttpServices;
+			sourceTree = "<group>";
+		};
+		43D5B61D2565D84A00ECE161 /* EnvironmentVariables */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B61E2565D86300ECE161 /* Constants.swift */,
+			);
+			path = EnvironmentVariables;
+			sourceTree = "<group>";
+		};
+		5AAE4BC493EE0E2C5A54B03D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4DD86915F725EA975A9D9F4 /* Pods_DinDin_Food_App.framework */,
+				379E081E7ADA8BA1478FFEE0 /* Pods_DinDin_Food_App_DinDin_Food_AppUITests.framework */,
+				4D430E68FB8FDD91579268C2 /* Pods_DinDin_Food_AppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6970484CFEF3DEDB59180A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8EEE048429ABCB4DDAAA9020 /* Pods-DinDin Food App.debug.xcconfig */,
+				6B237F0554F7F05DF60D8815 /* Pods-DinDin Food App.release.xcconfig */,
+				FDAA1937B600D8F4B10BDF78 /* Pods-DinDin Food App-DinDin Food AppUITests.debug.xcconfig */,
+				8BA46AF3B4ACD9ED6D4EA88C /* Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig */,
+				1CD50CF26FEC8C3D83F65864 /* Pods-DinDin Food AppTests.debug.xcconfig */,
+				D784D7D55F8467D870F5FA25 /* Pods-DinDin Food AppTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,9 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43D5B5A42565441A00ECE161 /* Build configuration list for PBXNativeTarget "DinDin Food App" */;
 			buildPhases = (
+				D7C1E60193E466300C3C9669 /* [CP] Check Pods Manifest.lock */,
 				43D5B5762565441500ECE161 /* Sources */,
 				43D5B5772565441500ECE161 /* Frameworks */,
 				43D5B5782565441500ECE161 /* Resources */,
+				F74DE01DC83829B9725DDBBA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,6 +264,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43D5B5A72565441A00ECE161 /* Build configuration list for PBXNativeTarget "DinDin Food AppTests" */;
 			buildPhases = (
+				8DC26F013405E87D7D9ED7CF /* [CP] Check Pods Manifest.lock */,
 				43D5B58C2565441A00ECE161 /* Sources */,
 				43D5B58D2565441A00ECE161 /* Frameworks */,
 				43D5B58E2565441A00ECE161 /* Resources */,
@@ -206,9 +283,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43D5B5AA2565441A00ECE161 /* Build configuration list for PBXNativeTarget "DinDin Food AppUITests" */;
 			buildPhases = (
+				0D1D451F3EF3C1F1CFFF2AD9 /* [CP] Check Pods Manifest.lock */,
 				43D5B5972565441A00ECE161 /* Sources */,
 				43D5B5982565441A00ECE161 /* Frameworks */,
 				43D5B5992565441A00ECE161 /* Resources */,
+				7DF624627793A1E67B4F9B08 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,6 +368,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D1D451F3EF3C1F1CFFF2AD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DinDin Food App-DinDin Food AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DF624627793A1E67B4F9B08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DinDin Food App-DinDin Food AppUITests/Pods-DinDin Food App-DinDin Food AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DinDin Food App-DinDin Food AppUITests/Pods-DinDin Food App-DinDin Food AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DinDin Food App-DinDin Food AppUITests/Pods-DinDin Food App-DinDin Food AppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DC26F013405E87D7D9ED7CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DinDin Food AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7C1E60193E466300C3C9669 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DinDin Food App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F74DE01DC83829B9725DDBBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DinDin Food App/Pods-DinDin Food App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DinDin Food App/Pods-DinDin Food App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DinDin Food App/Pods-DinDin Food App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		43D5B5762565441500ECE161 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -296,11 +478,17 @@
 			files = (
 				43D5B5822565441500ECE161 /* ViewController.swift in Sources */,
 				43D5B5CA256583A100ECE161 /* HomeRouter.swift in Sources */,
+				43D5B5DD256585B900ECE161 /* PromoOffersModel.swift in Sources */,
+				43D5B5E5256586EF00ECE161 /* HomeModuleBuilder.swift in Sources */,
 				43D5B57E2565441500ECE161 /* AppDelegate.swift in Sources */,
+				43D5B5F52565B41300ECE161 /* PromoOffersDataViewController.swift in Sources */,
 				43D5B5802565441500ECE161 /* SceneDelegate.swift in Sources */,
 				43D5B5C5256582D000ECE161 /* HomePresenter.swift in Sources */,
+				43D5B5ED256593E000ECE161 /* PromoOffersViewController.swift in Sources */,
 				43D5B5BF25657D5D00ECE161 /* HomeViewController.swift in Sources */,
 				43D5B5CF256583FB00ECE161 /* HomeInteractor.swift in Sources */,
+				43D5B6242565E40800ECE161 /* PromoPackagesService.swift in Sources */,
+				43D5B61F2565D86300ECE161 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +661,7 @@
 		};
 		43D5B5A52565441A00ECE161 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EEE048429ABCB4DDAAA9020 /* Pods-DinDin Food App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -493,6 +682,7 @@
 		};
 		43D5B5A62565441A00ECE161 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B237F0554F7F05DF60D8815 /* Pods-DinDin Food App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -513,6 +703,7 @@
 		};
 		43D5B5A82565441A00ECE161 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CD50CF26FEC8C3D83F65864 /* Pods-DinDin Food AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -535,6 +726,7 @@
 		};
 		43D5B5A92565441A00ECE161 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D784D7D55F8467D870F5FA25 /* Pods-DinDin Food AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -557,6 +749,7 @@
 		};
 		43D5B5AB2565441A00ECE161 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDAA1937B600D8F4B10BDF78 /* Pods-DinDin Food App-DinDin Food AppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -577,6 +770,7 @@
 		};
 		43D5B5AC2565441A00ECE161 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BA46AF3B4ACD9ED6D4EA88C /* Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
