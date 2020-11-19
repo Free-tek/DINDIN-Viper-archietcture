@@ -11,7 +11,6 @@
 		1134011429E1E9B3015851BD /* Pods_DinDin_Food_App_DinDin_Food_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379E081E7ADA8BA1478FFEE0 /* Pods_DinDin_Food_App_DinDin_Food_AppUITests.framework */; };
 		43D5B57E2565441500ECE161 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B57D2565441500ECE161 /* AppDelegate.swift */; };
 		43D5B5802565441500ECE161 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B57F2565441500ECE161 /* SceneDelegate.swift */; };
-		43D5B5822565441500ECE161 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B5812565441500ECE161 /* ViewController.swift */; };
 		43D5B5852565441500ECE161 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D5B5832565441500ECE161 /* Main.storyboard */; };
 		43D5B5872565441A00ECE161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D5B5862565441A00ECE161 /* Assets.xcassets */; };
 		43D5B58A2565441A00ECE161 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D5B5882565441A00ECE161 /* LaunchScreen.storyboard */; };
@@ -34,6 +33,24 @@
 		43D5B65B25661FA300ECE161 /* PizzaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B65A25661FA300ECE161 /* PizzaPresenter.swift */; };
 		43D5B6602566200400ECE161 /* PizzaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B65F2566200400ECE161 /* PizzaRouter.swift */; };
 		43D5B6652566203E00ECE161 /* PizzaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6642566203E00ECE161 /* PizzaInteractor.swift */; };
+		43D5B6712566DDF300ECE161 /* SushiContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6702566DDF300ECE161 /* SushiContainerViewController.swift */; };
+		43D5B67A2566DF0200ECE161 /* SushiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6792566DF0200ECE161 /* SushiModel.swift */; };
+		43D5B6832566DF6A00ECE161 /* SushiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6822566DF6A00ECE161 /* SushiViewModel.swift */; };
+		43D5B6892566DFEA00ECE161 /* SushiViewModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6882566DFEA00ECE161 /* SushiViewModelController.swift */; };
+		43D5B6912566E1F300ECE161 /* SushiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B68F2566E1F300ECE161 /* SushiTableViewCell.swift */; };
+		43D5B6922566E1F300ECE161 /* SushiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D5B6902566E1F300ECE161 /* SushiTableViewCell.xib */; };
+		43D5B6972566E38100ECE161 /* SushiPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6962566E38100ECE161 /* SushiPresenter.swift */; };
+		43D5B69C2566E3C800ECE161 /* SushiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B69B2566E3C800ECE161 /* SushiRouter.swift */; };
+		43D5B6A12566E3DB00ECE161 /* SushiInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6A02566E3DB00ECE161 /* SushiInteractor.swift */; };
+		43D5B6AA2566EFC000ECE161 /* DrinksContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6A92566EFBF00ECE161 /* DrinksContainerViewController.swift */; };
+		43D5B6B12566F1A600ECE161 /* DrinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6AF2566F1A600ECE161 /* DrinksTableViewCell.swift */; };
+		43D5B6B22566F1A600ECE161 /* DrinksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D5B6B02566F1A600ECE161 /* DrinksTableViewCell.xib */; };
+		43D5B6B82566F24200ECE161 /* DrinksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6B72566F24200ECE161 /* DrinksModel.swift */; };
+		43D5B6BE2566F2DF00ECE161 /* DrinksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6BD2566F2DF00ECE161 /* DrinksViewModel.swift */; };
+		43D5B6C42566F34200ECE161 /* DrinksViewModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6C32566F34200ECE161 /* DrinksViewModelController.swift */; };
+		43D5B6CC2566F58800ECE161 /* DrinksInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6CB2566F58800ECE161 /* DrinksInteractor.swift */; };
+		43D5B6D12566F60B00ECE161 /* DrinksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6D02566F60B00ECE161 /* DrinksRouter.swift */; };
+		43D5B6D62566F66400ECE161 /* DrinksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6D52566F66400ECE161 /* DrinksPresenter.swift */; };
 		5D0814C63A4C345D26BDC994 /* Pods_DinDin_Food_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DD86915F725EA975A9D9F4 /* Pods_DinDin_Food_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +77,6 @@
 		43D5B57A2565441500ECE161 /* DinDin Food App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DinDin Food App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D5B57D2565441500ECE161 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43D5B57F2565441500ECE161 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		43D5B5812565441500ECE161 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		43D5B5842565441500ECE161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43D5B5862565441A00ECE161 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43D5B5892565441A00ECE161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,6 +104,24 @@
 		43D5B65A25661FA300ECE161 /* PizzaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaPresenter.swift; sourceTree = "<group>"; };
 		43D5B65F2566200400ECE161 /* PizzaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaRouter.swift; sourceTree = "<group>"; };
 		43D5B6642566203E00ECE161 /* PizzaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaInteractor.swift; sourceTree = "<group>"; };
+		43D5B6702566DDF300ECE161 /* SushiContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiContainerViewController.swift; sourceTree = "<group>"; };
+		43D5B6792566DF0200ECE161 /* SushiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiModel.swift; sourceTree = "<group>"; };
+		43D5B6822566DF6A00ECE161 /* SushiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiViewModel.swift; sourceTree = "<group>"; };
+		43D5B6882566DFEA00ECE161 /* SushiViewModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiViewModelController.swift; sourceTree = "<group>"; };
+		43D5B68F2566E1F300ECE161 /* SushiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiTableViewCell.swift; sourceTree = "<group>"; };
+		43D5B6902566E1F300ECE161 /* SushiTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SushiTableViewCell.xib; sourceTree = "<group>"; };
+		43D5B6962566E38100ECE161 /* SushiPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiPresenter.swift; sourceTree = "<group>"; };
+		43D5B69B2566E3C800ECE161 /* SushiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiRouter.swift; sourceTree = "<group>"; };
+		43D5B6A02566E3DB00ECE161 /* SushiInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiInteractor.swift; sourceTree = "<group>"; };
+		43D5B6A92566EFBF00ECE161 /* DrinksContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksContainerViewController.swift; sourceTree = "<group>"; };
+		43D5B6AF2566F1A600ECE161 /* DrinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksTableViewCell.swift; sourceTree = "<group>"; };
+		43D5B6B02566F1A600ECE161 /* DrinksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksTableViewCell.xib; sourceTree = "<group>"; };
+		43D5B6B72566F24200ECE161 /* DrinksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksModel.swift; sourceTree = "<group>"; };
+		43D5B6BD2566F2DF00ECE161 /* DrinksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewModel.swift; sourceTree = "<group>"; };
+		43D5B6C32566F34200ECE161 /* DrinksViewModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewModelController.swift; sourceTree = "<group>"; };
+		43D5B6CB2566F58800ECE161 /* DrinksInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksInteractor.swift; sourceTree = "<group>"; };
+		43D5B6D02566F60B00ECE161 /* DrinksRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksRouter.swift; sourceTree = "<group>"; };
+		43D5B6D52566F66400ECE161 /* DrinksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksPresenter.swift; sourceTree = "<group>"; };
 		4D430E68FB8FDD91579268C2 /* Pods_DinDin_Food_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DinDin_Food_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B237F0554F7F05DF60D8815 /* Pods-DinDin Food App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDin Food App.release.xcconfig"; path = "Target Support Files/Pods-DinDin Food App/Pods-DinDin Food App.release.xcconfig"; sourceTree = "<group>"; };
 		8BA46AF3B4ACD9ED6D4EA88C /* Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig"; path = "Target Support Files/Pods-DinDin Food App-DinDin Food AppUITests/Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,15 +184,15 @@
 		43D5B57C2565441500ECE161 /* DinDin Food App */ = {
 			isa = PBXGroup;
 			children = (
+				43D5B6A52566EEDB00ECE161 /* DrinksModule */,
+				43D5B66F2566DDBE00ECE161 /* SushiModule */,
 				43D5B6342566160600ECE161 /* PizzaModule */,
 				43D5B61D2565D84A00ECE161 /* EnvironmentVariables */,
 				43D5B61C2565D83800ECE161 /* HttpServices */,
 				43D5B5DB256584F300ECE161 /* Entity */,
 				43D5B5C32565822700ECE161 /* HomeModule */,
-				43D5B5B325654E4100ECE161 /* ViewControllers */,
 				43D5B57D2565441500ECE161 /* AppDelegate.swift */,
 				43D5B57F2565441500ECE161 /* SceneDelegate.swift */,
-				43D5B5812565441500ECE161 /* ViewController.swift */,
 				43D5B5832565441500ECE161 /* Main.storyboard */,
 				43D5B5862565441A00ECE161 /* Assets.xcassets */,
 				43D5B5882565441A00ECE161 /* LaunchScreen.storyboard */,
@@ -183,13 +217,6 @@
 				43D5B5A12565441A00ECE161 /* Info.plist */,
 			);
 			path = "DinDin Food AppUITests";
-			sourceTree = "<group>";
-		};
-		43D5B5B325654E4100ECE161 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		43D5B5C32565822700ECE161 /* HomeModule */ = {
@@ -274,6 +301,102 @@
 				43D5B64D256619D100ECE161 /* PizzaViewModelController.swift */,
 			);
 			path = PizzaViewModelController;
+			sourceTree = "<group>";
+		};
+		43D5B66F2566DDBE00ECE161 /* SushiModule */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B68E2566E1D700ECE161 /* SushiViews */,
+				43D5B6872566DFAF00ECE161 /* SushiViewModelController */,
+				43D5B6812566DF4A00ECE161 /* SushiViewModel */,
+				43D5B6782566DEEC00ECE161 /* SushiModel */,
+				43D5B6702566DDF300ECE161 /* SushiContainerViewController.swift */,
+				43D5B6962566E38100ECE161 /* SushiPresenter.swift */,
+				43D5B69B2566E3C800ECE161 /* SushiRouter.swift */,
+				43D5B6A02566E3DB00ECE161 /* SushiInteractor.swift */,
+			);
+			path = SushiModule;
+			sourceTree = "<group>";
+		};
+		43D5B6782566DEEC00ECE161 /* SushiModel */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B6792566DF0200ECE161 /* SushiModel.swift */,
+			);
+			path = SushiModel;
+			sourceTree = "<group>";
+		};
+		43D5B6812566DF4A00ECE161 /* SushiViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B6822566DF6A00ECE161 /* SushiViewModel.swift */,
+			);
+			path = SushiViewModel;
+			sourceTree = "<group>";
+		};
+		43D5B6872566DFAF00ECE161 /* SushiViewModelController */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B6882566DFEA00ECE161 /* SushiViewModelController.swift */,
+			);
+			path = SushiViewModelController;
+			sourceTree = "<group>";
+		};
+		43D5B68E2566E1D700ECE161 /* SushiViews */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B68F2566E1F300ECE161 /* SushiTableViewCell.swift */,
+				43D5B6902566E1F300ECE161 /* SushiTableViewCell.xib */,
+			);
+			path = SushiViews;
+			sourceTree = "<group>";
+		};
+		43D5B6A52566EEDB00ECE161 /* DrinksModule */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B6C22566F31A00ECE161 /* DrinksViewModelController */,
+				43D5B6BC2566F28800ECE161 /* DrinksViewModel */,
+				43D5B6B62566F23200ECE161 /* DrinksModel */,
+				43D5B6AE2566F18800ECE161 /* DrinksView */,
+				43D5B6A92566EFBF00ECE161 /* DrinksContainerViewController.swift */,
+				43D5B6CB2566F58800ECE161 /* DrinksInteractor.swift */,
+				43D5B6D02566F60B00ECE161 /* DrinksRouter.swift */,
+				43D5B6D52566F66400ECE161 /* DrinksPresenter.swift */,
+			);
+			path = DrinksModule;
+			sourceTree = "<group>";
+		};
+		43D5B6AE2566F18800ECE161 /* DrinksView */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B6AF2566F1A600ECE161 /* DrinksTableViewCell.swift */,
+				43D5B6B02566F1A600ECE161 /* DrinksTableViewCell.xib */,
+			);
+			path = DrinksView;
+			sourceTree = "<group>";
+		};
+		43D5B6B62566F23200ECE161 /* DrinksModel */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B6B72566F24200ECE161 /* DrinksModel.swift */,
+			);
+			path = DrinksModel;
+			sourceTree = "<group>";
+		};
+		43D5B6BC2566F28800ECE161 /* DrinksViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B6BD2566F2DF00ECE161 /* DrinksViewModel.swift */,
+			);
+			path = DrinksViewModel;
+			sourceTree = "<group>";
+		};
+		43D5B6C22566F31A00ECE161 /* DrinksViewModelController */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B6C32566F34200ECE161 /* DrinksViewModelController.swift */,
+			);
+			path = DrinksViewModelController;
 			sourceTree = "<group>";
 		};
 		5AAE4BC493EE0E2C5A54B03D /* Frameworks */ = {
@@ -407,7 +530,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D5B6922566E1F300ECE161 /* SushiTableViewCell.xib in Resources */,
 				43D5B6392566163B00ECE161 /* PizzaTableViewCell.xib in Resources */,
+				43D5B6B22566F1A600ECE161 /* DrinksTableViewCell.xib in Resources */,
 				43D5B58A2565441A00ECE161 /* LaunchScreen.storyboard in Resources */,
 				43D5B5872565441A00ECE161 /* Assets.xcassets in Resources */,
 				43D5B5852565441500ECE161 /* Main.storyboard in Resources */,
@@ -538,7 +663,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43D5B5822565441500ECE161 /* ViewController.swift in Sources */,
 				43D5B6602566200400ECE161 /* PizzaRouter.swift in Sources */,
 				43D5B5CA256583A100ECE161 /* HomeRouter.swift in Sources */,
 				43D5B640256618E100ECE161 /* PizzaModel.swift in Sources */,
@@ -548,15 +672,31 @@
 				43D5B57E2565441500ECE161 /* AppDelegate.swift in Sources */,
 				43D5B5802565441500ECE161 /* SceneDelegate.swift in Sources */,
 				43D5B6382566163B00ECE161 /* PizzaTableViewCell.swift in Sources */,
+				43D5B6892566DFEA00ECE161 /* SushiViewModelController.swift in Sources */,
 				43D5B5C5256582D000ECE161 /* HomePresenter.swift in Sources */,
+				43D5B6B82566F24200ECE161 /* DrinksModel.swift in Sources */,
 				43D5B6482566198300ECE161 /* PizzaViewModel.swift in Sources */,
+				43D5B6832566DF6A00ECE161 /* SushiViewModel.swift in Sources */,
+				43D5B69C2566E3C800ECE161 /* SushiRouter.swift in Sources */,
 				43D5B6652566203E00ECE161 /* PizzaInteractor.swift in Sources */,
+				43D5B6A12566E3DB00ECE161 /* SushiInteractor.swift in Sources */,
+				43D5B67A2566DF0200ECE161 /* SushiModel.swift in Sources */,
+				43D5B6912566E1F300ECE161 /* SushiTableViewCell.swift in Sources */,
 				43D5B5BF25657D5D00ECE161 /* HomeViewController.swift in Sources */,
 				43D5B65B25661FA300ECE161 /* PizzaPresenter.swift in Sources */,
+				43D5B6D62566F66400ECE161 /* DrinksPresenter.swift in Sources */,
 				43D5B5CF256583FB00ECE161 /* HomeInteractor.swift in Sources */,
+				43D5B6972566E38100ECE161 /* SushiPresenter.swift in Sources */,
+				43D5B6CC2566F58800ECE161 /* DrinksInteractor.swift in Sources */,
+				43D5B6B12566F1A600ECE161 /* DrinksTableViewCell.swift in Sources */,
+				43D5B6C42566F34200ECE161 /* DrinksViewModelController.swift in Sources */,
+				43D5B6AA2566EFC000ECE161 /* DrinksContainerViewController.swift in Sources */,
+				43D5B6712566DDF300ECE161 /* SushiContainerViewController.swift in Sources */,
+				43D5B6D12566F60B00ECE161 /* DrinksRouter.swift in Sources */,
 				43D5B6242565E40800ECE161 /* PromoPackagesService.swift in Sources */,
 				43D5B61F2565D86300ECE161 /* Constants.swift in Sources */,
 				43D5B630256613E600ECE161 /* PizzaContainerViewController.swift in Sources */,
+				43D5B6BE2566F2DF00ECE161 /* DrinksViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

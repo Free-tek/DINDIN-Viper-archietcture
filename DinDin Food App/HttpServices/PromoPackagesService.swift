@@ -22,15 +22,16 @@ class PromoPackagesService {
             case .success(let response):
                 
                 do {
-
+                    
+                    
                     let json = try JSON(data: response.data)
-
+                    
                     if json["success"][0]["success"].string == "success"{
                         
                         for i in 0...json["result"].count {
                             
-                            if json["result"][i].string != nil{
-                                let bannerImageUrl = json["result"][i].string!
+                            if json["result"][i]["image"].string != nil{
+                                let bannerImageUrl = json["result"][i]["image"].string!
                                 self.promoOffersBannerImageList.append(bannerImageUrl)
                             }
                             
@@ -49,6 +50,8 @@ class PromoPackagesService {
                 
             case .failure(let error):
                 print("fetch promoBanner error: \(error)")
+                completion(self.promoOffersBannerImageList)
+                
             }
         }
     }

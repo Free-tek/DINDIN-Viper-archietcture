@@ -24,17 +24,19 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var menuViewBoundaryViewConstraint: NSLayoutConstraint!
     
     
-    @IBOutlet weak var pizzaTabTitle: UILabel!
+    @IBOutlet weak var tabHeader1: UILabel!
+    @IBOutlet weak var tabHeader2: UILabel!
+    @IBOutlet weak var tabHeader3: UILabel!
+    
+    
     @IBOutlet weak var pizzaContainerViewTab: UIView!
     @IBOutlet weak var pizzaContainerViewTabHeightConstraint: NSLayoutConstraint!
     
     
-    @IBOutlet weak var sushiTabTitle: UILabel!
     @IBOutlet weak var sushiContainerViewTab: UIView!
     @IBOutlet weak var sushiContainerViewTabHeightConstraint: NSLayoutConstraint!
     
     
-    @IBOutlet weak var drinksTabTitle: UILabel!
     @IBOutlet weak var DrinksContainerViewTab: UIView!
     @IBOutlet weak var DrinksContainerViewTabHeightConstraint: NSLayoutConstraint!
     
@@ -49,7 +51,14 @@ class HomeViewController: UIViewController {
     
     var presenter: HomePresentation!
     var pizzaContainerViewController: PizzaContainerViewController!
-    var currentIndex = 0
+    
+    enum HomePageTabs: String {
+       case pizza = "Pizza"
+       case sushi = "Sushi"
+       case drinks = "Drinks"
+    }
+    var currentPage = HomePageTabs.pizza
+    var currentPageIndex = 0
     
     
     enum Segues{
@@ -82,9 +91,9 @@ extension HomeViewController: HomeView{
         
         pagerView.layer.contents = #imageLiteral(resourceName: "default1").cgImage
         
-        pizzaTabTitle.textColor = UIColor.black
-        sushiTabTitle.textColor = UIColor.gray
-        drinksTabTitle.textColor = UIColor.gray
+        tabHeader1.textColor = UIColor.black
+        tabHeader2.textColor = UIColor.gray
+        tabHeader3.textColor = UIColor.gray
         
         let screenSize = UIScreen.main.bounds
         let ScreenHeight = screenSize.height
@@ -123,39 +132,43 @@ extension HomeViewController: HomeView{
            self.view.addGestureRecognizer(leftRecognizer)
            self.view.addGestureRecognizer(rightRecognizer)
         
-        
-        //pizzaContainerViewController.setUpElements()
+    
         
     }
     
     @objc func swipeMade(_ sender: UISwipeGestureRecognizer) {
         if sender.direction == .left {
             
-            
-            if currentIndex == 2{
-                currentIndex = 0
-            
-                pizzaTabTitle.textColor = UIColor.black
-                drinksTabTitle.textColor = UIColor.gray
+            if currentPageIndex == 2{
+                currentPageIndex = 0
+               
+                tabHeader1.text = HomePageTabs.pizza.rawValue
+                tabHeader2.text = HomePageTabs.sushi.rawValue
+                tabHeader3.text = HomePageTabs.drinks.rawValue
                 
                 
                 pizzaContainerViewTab.alpha = 1
                 DrinksContainerViewTab.alpha = 0
                 
-            }else if currentIndex == 1{
-                currentIndex = currentIndex + 1
+            }else if currentPageIndex == 1{
+                currentPageIndex = currentPageIndex + 1
                 
-                sushiTabTitle.textColor = UIColor.gray
-                drinksTabTitle.textColor = UIColor.black
+                
+                tabHeader1.text = HomePageTabs.drinks.rawValue
+                tabHeader2.text = HomePageTabs.pizza.rawValue
+                tabHeader3.text = HomePageTabs.sushi.rawValue
+                
                 
                 sushiContainerViewTab.alpha = 0
                 DrinksContainerViewTab.alpha = 1
             
-            }else if currentIndex == 0{
-                currentIndex = currentIndex + 1
+            }else if currentPageIndex == 0{
+                currentPageIndex = currentPageIndex + 1
                 
-                sushiTabTitle.textColor = UIColor.black
-                pizzaTabTitle.textColor = UIColor.gray
+                tabHeader1.text = HomePageTabs.sushi.rawValue
+                tabHeader2.text = HomePageTabs.drinks.rawValue
+                tabHeader3.text = HomePageTabs.pizza.rawValue
+                
                 
                 pizzaContainerViewTab.alpha = 0
                 sushiContainerViewTab.alpha = 1
@@ -167,31 +180,35 @@ extension HomeViewController: HomeView{
         if sender.direction == .right {
             
             
-            if currentIndex == 0{
-                currentIndex = 2
+            if currentPageIndex == 0{
+                currentPageIndex = 2
                 
-                drinksTabTitle.textColor = UIColor.black
-                pizzaTabTitle.textColor = UIColor.gray
-               
+                tabHeader1.text = HomePageTabs.drinks.rawValue
+                tabHeader2.text = HomePageTabs.pizza.rawValue
+                tabHeader3.text = HomePageTabs.sushi.rawValue
+                
+            
                 
                 DrinksContainerViewTab.alpha = 1
                 pizzaContainerViewTab.alpha = 0
                 
-            }else if currentIndex == 1{
-                currentIndex = currentIndex - 1
+            }else if currentPageIndex == 1{
+                currentPageIndex = currentPageIndex - 1
                 
-                sushiTabTitle.textColor = UIColor.gray
-                pizzaTabTitle.textColor = UIColor.black
+                tabHeader1.text = HomePageTabs.pizza.rawValue
+                tabHeader2.text = HomePageTabs.sushi.rawValue
+                tabHeader3.text = HomePageTabs.drinks.rawValue
                 
                 pizzaContainerViewTab.alpha = 1
                 sushiContainerViewTab.alpha = 0
                 
                 
-            }else if currentIndex == 2{
-                currentIndex = currentIndex - 1
+            }else if currentPageIndex == 2{
+                currentPageIndex = currentPageIndex - 1
                 
-                sushiTabTitle.textColor = UIColor.black
-                drinksTabTitle.textColor = UIColor.gray
+                tabHeader1.text = HomePageTabs.sushi.rawValue
+                tabHeader2.text = HomePageTabs.drinks.rawValue
+                tabHeader3.text = HomePageTabs.pizza.rawValue
                 
                 sushiContainerViewTab.alpha = 1
                 DrinksContainerViewTab.alpha = 0

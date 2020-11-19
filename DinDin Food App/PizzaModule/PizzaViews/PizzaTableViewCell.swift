@@ -49,6 +49,8 @@ class PizzaTableViewCell: UITableViewCell {
     public func configure(with viewModel: PizzaViewModel) {
         
         pizzaImage.setImage(with: viewModel.pizzaImage!)
+        
+        
         pizzaName.text = viewModel.pizzaName!
         pizzaDescriptton.text = viewModel.pizzaDescription!
         pizzaPrice.text = " $\(viewModel.pizzaPrice!)"
@@ -57,7 +59,7 @@ class PizzaTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let margins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        let margins = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
         contentView.frame = contentView.frame.inset(by: margins)
         
         backgroundColor = .clear

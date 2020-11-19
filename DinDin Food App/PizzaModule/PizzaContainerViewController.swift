@@ -22,7 +22,6 @@ class PizzaContainerViewController: UIViewController {
     @IBOutlet weak var pizzaTableViewViewConstraint: NSLayoutConstraint!
 
     var presenter: PizzaPresentation!
-    var viewModelCount: Int?
     var pizzaViewModelController: PizzaViewModelController = PizzaViewModelController()
     
     override func viewDidLoad() {

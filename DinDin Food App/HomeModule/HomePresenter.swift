@@ -42,7 +42,8 @@ extension HomePresenter: HomePresentation{
             DispatchQueue.main.async { [weak self] in
                 self!.view?.setUpPromoOffersView(promoBannerImages: result)
             }
-            print("result here: \(result)")
+            
+            
         })
 
 

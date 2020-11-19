@@ -6,3 +6,29 @@
 //
 
 import Foundation
+
+
+
+protocol SushiInteractions{
+    
+    func fetchSushiData(completion: @escaping (_ result: SushiViewModelController ) -> Void) -> Void
+    
+}
+    
+class SushiInteractor {
+    
+    
+    
+}
+extension SushiInteractor: SushiInteractions{
+    
+    func fetchSushiData(completion: @escaping (_ result: SushiViewModelController ) -> Void){
+        
+        var sushiViewModelController: SushiViewModelController = SushiViewModelController()
+        sushiViewModelController.FetchSushiData( completion: { (result) in
+            completion(sushiViewModelController)
+        })
+    }
+    
+    
+}

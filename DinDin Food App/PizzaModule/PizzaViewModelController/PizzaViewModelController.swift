@@ -21,14 +21,14 @@ class PizzaViewModelController{
             switch result {
             
             case .success(let response):
-                print("this was our response 2: \(response)")
+                
                 
                 do {
 
                     let json = try JSON(data: response.data)
                     var pizzaModel = [PizzaModel?]()
                     
-                    print("this was our response 2: \(json)")
+                    
                     if json["success"][0]["success"].string == "success" && json["error"][0]["error"].string != "invalid token"{
                         for i in 0...json["result"].count - 1 {
                             
@@ -104,7 +104,7 @@ enum FetchPizzaServiceAPI{
         var path: String{
             switch self{
             case .getPizzaData:
-                return Constants.Endpoints.fetchFoodList
+                return Constants.Endpoints.fetchPizzaList
                 
             }
         }

@@ -12,7 +12,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" customModule="DinDin_Food_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" customModule="DinDin_Food_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,20 +175,20 @@
                     <connections>
                         <outlet property="DrinksContainerViewTab" destination="D0r-gz-9ti" id="dPX-VY-z9I"/>
                         <outlet property="DrinksContainerViewTabHeightConstraint" destination="Bcm-wC-Ed2" id="Ugx-dE-gFH"/>
-                        <outlet property="drinksTabTitle" destination="WuH-c4-bas" id="YIk-F9-iIV"/>
                         <outlet property="menuViewBoundaryView" destination="z1z-Cw-U09" id="rAQ-0Z-5NC"/>
                         <outlet property="menuViewBoundaryViewConstraint" destination="tHP-pg-Zwu" id="WUX-wo-Opz"/>
                         <outlet property="pagerView" destination="h7X-GM-Ihn" id="Luk-sp-h53"/>
                         <outlet property="pizzaContainerViewTab" destination="NRI-t8-3Ue" id="1ez-m0-Rqe"/>
                         <outlet property="pizzaContainerViewTabHeightConstraint" destination="seR-XZ-jnN" id="bjd-Fr-Xfh"/>
-                        <outlet property="pizzaTabTitle" destination="Li7-Rw-YF0" id="2FF-Yy-rmn"/>
                         <outlet property="scrollView" destination="2Uu-sx-QMl" id="GCL-bi-1AQ"/>
                         <outlet property="scrollViewContentView" destination="KoI-NQ-9q8" id="AFE-H9-Ek5"/>
                         <outlet property="scrollViewHeightConstraint" destination="pso-u3-Uex" id="QZg-dI-yz9"/>
                         <outlet property="scrolleViewContentViewHeightConsttraints" destination="TDb-Bs-jOM" id="iwF-LT-esf"/>
                         <outlet property="sushiContainerViewTab" destination="ZS3-hc-1vl" id="wOD-A9-LcI"/>
                         <outlet property="sushiContainerViewTabHeightConstraint" destination="NGZ-jb-W02" id="li7-dn-eY2"/>
-                        <outlet property="sushiTabTitle" destination="hzF-LS-ECn" id="J0O-t7-dLe"/>
+                        <outlet property="tabHeader1" destination="Li7-Rw-YF0" id="Ttv-MJ-11K"/>
+                        <outlet property="tabHeader2" destination="hzF-LS-ECn" id="EkW-Sc-TiY"/>
+                        <outlet property="tabHeader3" destination="WuH-c4-bas" id="cJ3-p0-xgU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -198,7 +198,7 @@
         <!--Pizza Container View Controller-->
         <scene sceneID="9ln-l2-cSa">
             <objects>
-                <viewController storyboardIdentifier="PizzaContainerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xAL-QB-KZm" customClass="PizzaContainerViewController" customModule="DinDin_Food_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PizzaContainerViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xAL-QB-KZm" customClass="PizzaContainerViewController" customModule="DinDin_Food_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JyZ-DR-wgB">
                         <rect key="frame" x="0.0" y="0.0" width="398" height="407"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,33 +230,73 @@
             </objects>
             <point key="canvasLocation" x="918.84057971014499" y="-581.25"/>
         </scene>
-        <!--View Controller-->
+        <!--Sushi Container View Controller-->
         <scene sceneID="R54-D5-Ijm">
             <objects>
-                <viewController id="MOv-g5-6iK" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="MOv-g5-6iK" customClass="SushiContainerViewController" customModule="DinDin_Food_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fRF-1Q-K9U">
                         <rect key="frame" x="0.0" y="0.0" width="398" height="407"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lsp-xf-SVh">
+                                <rect key="frame" x="0.0" y="0.0" width="398" height="407"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="398" id="RCN-D3-pAN"/>
+                                    <constraint firstAttribute="height" priority="250" constant="407" id="vvk-gX-cPE"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lsp-xf-SVh" firstAttribute="leading" secondItem="fRF-1Q-K9U" secondAttribute="leading" id="12x-Le-jTo"/>
+                            <constraint firstAttribute="bottom" secondItem="lsp-xf-SVh" secondAttribute="bottom" id="A0c-1q-WVd"/>
+                            <constraint firstItem="lsp-xf-SVh" firstAttribute="top" secondItem="fRF-1Q-K9U" secondAttribute="top" id="YyE-l6-YpJ"/>
+                            <constraint firstAttribute="trailing" secondItem="lsp-xf-SVh" secondAttribute="trailing" id="lTu-Ux-BGr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sushiTableViewHeightConstraint" destination="vvk-gX-cPE" id="Z12-Ky-csb"/>
+                        <outlet property="susshiTableView" destination="lsp-xf-SVh" id="W6l-hi-XxW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iw0-5i-gKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919" y="-156"/>
+            <point key="canvasLocation" x="918.84057971014499" y="-156.36160714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Drinks Container View Controller-->
         <scene sceneID="YTA-vU-X1B">
             <objects>
-                <viewController id="W66-gh-yf4" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="W66-gh-yf4" customClass="DrinksContainerViewController" customModule="DinDin_Food_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dRn-KX-wFK">
                         <rect key="frame" x="0.0" y="0.0" width="398" height="407"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gag-d3-CaK">
+                                <rect key="frame" x="0.0" y="0.0" width="398" height="407"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="398" id="37l-Mm-YDg"/>
+                                    <constraint firstAttribute="height" constant="407" id="O3E-hl-yX6"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gag-d3-CaK" secondAttribute="bottom" id="34J-uF-BUN"/>
+                            <constraint firstAttribute="trailing" secondItem="gag-d3-CaK" secondAttribute="trailing" id="6As-cm-F8a"/>
+                            <constraint firstItem="gag-d3-CaK" firstAttribute="top" secondItem="dRn-KX-wFK" secondAttribute="top" id="sGH-G2-VOo"/>
+                            <constraint firstItem="gag-d3-CaK" firstAttribute="leading" secondItem="dRn-KX-wFK" secondAttribute="leading" id="zmx-dh-kLI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="drinksTableView" destination="gag-d3-CaK" id="oal-K6-cZy"/>
+                        <outlet property="drinksTableViewHeightConsttraint" destination="O3E-hl-yX6" id="HJR-GX-p5P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBQ-og-jVT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919" y="252"/>
+            <point key="canvasLocation" x="918.84057971014499" y="251.45089285714283"/>
         </scene>
     </scenes>
     <resources>
@@ -265,12 +305,6 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
