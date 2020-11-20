@@ -94,18 +94,10 @@ extension SushiContainerViewController: UITableViewDelegate, UITableViewDataSour
             cell.buySushiButton.rx.tap
                 .bind {
 
-                    let order = OrderModel(orderName: viewModel.susshiName, orderImage: viewModel.susshiImage, orderStoreId: viewModel.susshiStoreId, orderPrice: viewModel.susshiPrice)
-                    
-                    
-                    let newValue =  CartOrdersModel.seeOrders.orders.value + [order]
-                    CartOrdersModel.seeOrders.orders.accept(newValue)
-                    
-                    
-                    
-                    cell.buySushiButton.backgroundColor = UIColor.green
+                    self.takeOrder_Animate(viewModel: viewModel, sender: cell.buySushiButton)
                     
                 }
-                .disposed(by: disposeBag)
+                .disposed(by: cell.disposeBag)
             
         }
         
@@ -124,6 +116,25 @@ extension SushiContainerViewController: UITableViewDelegate, UITableViewDataSour
         
     }
 
+    func takeOrder_Animate(viewModel: SushiViewModel, sender: UIButton){
+        
+        let order = OrderModel(orderName: viewModel.susshiName, orderImage: viewModel.susshiImage, orderStoreId: viewModel.susshiStoreId, orderPrice: viewModel.susshiPrice)
+        let newValue =  CartOrdersModel.seeOrders.orders.value + [order]
+        CartOrdersModel.seeOrders.orders.accept(newValue)
+        
+        sender.backgroundColor = UIColor.green
+        sender.setTitle("added + 1", for: .normal)
+        
+        Observable<Int>.interval(.milliseconds(25), scheduler: MainScheduler.instance)
+            .map { 25 - $0 }
+            .takeUntil(.inclusive, predicate: { $0 == 0 })
+            .subscribe(onNext: { value in
+            }, onCompleted: {
+                sender.backgroundColor = UIColor.black
+                sender.setTitle("$\(viewModel.susshiPrice!)", for: .normal)
+            }).disposed(by: self.disposeBag)
+        
+    }
 
     
 }

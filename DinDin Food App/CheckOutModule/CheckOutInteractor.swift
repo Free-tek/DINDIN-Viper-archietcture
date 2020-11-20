@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+protocol CheckOutInteractions{
+    
+}
+    
+class CheckOutInteractor {
+    
+    
+    
+}
+extension CheckOutInteractor: CheckOutInteractions{
+    
+    
+}

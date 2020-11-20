@@ -11,9 +11,8 @@ import RxCocoa
 
 class CartOrdersModel {
   static let seeOrders = CartOrdersModel()
-  let orders: BehaviorRelay<[OrderModel]> = BehaviorRelay(value: [])
+  var orders: BehaviorRelay<[OrderModel]> = BehaviorRelay(value: [])
 }
-
 
 struct OrderModel {
     let orderName: String?

@@ -52,6 +52,18 @@
 		43D5B6D12566F60B00ECE161 /* DrinksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6D02566F60B00ECE161 /* DrinksRouter.swift */; };
 		43D5B6D62566F66400ECE161 /* DrinksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6D52566F66400ECE161 /* DrinksPresenter.swift */; };
 		43D5B6E52567322C00ECE161 /* CartOrdersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6E42567322B00ECE161 /* CartOrdersModel.swift */; };
+		43D5B6FA25675DBC00ECE161 /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6F925675DBC00ECE161 /* CheckOutViewController.swift */; };
+		43D5B7022567678500ECE161 /* CheckOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B7012567678500ECE161 /* CheckOutRouter.swift */; };
+		43D5B707256767A300ECE161 /* CheckOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B706256767A300ECE161 /* CheckOutInteractor.swift */; };
+		43D5B70C256767B600ECE161 /* CheckOutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B70B256767B600ECE161 /* CheckOutPresenter.swift */; };
+		43D5B71425676CC700ECE161 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B71325676CC700ECE161 /* CartViewModel.swift */; };
+		43D5B71E25676D4200ECE161 /* CartViewModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B71D25676D4200ECE161 /* CartViewModelController.swift */; };
+		43D5B72725676ECD00ECE161 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B72525676ECD00ECE161 /* CartTableViewCell.swift */; };
+		43D5B72825676ECD00ECE161 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D5B72625676ECD00ECE161 /* CartTableViewCell.xib */; };
+		43D5B72D2567D82800ECE161 /* CartContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B72C2567D82800ECE161 /* CartContainerViewController.swift */; };
+		43D5B7322567D85400ECE161 /* CartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B7312567D85400ECE161 /* CartInteractor.swift */; };
+		43D5B7372567D96F00ECE161 /* CartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B7362567D96F00ECE161 /* CartRouter.swift */; };
+		43D5B7472567DC3400ECE161 /* CartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B7462567DC3400ECE161 /* CartPresenter.swift */; };
 		5D0814C63A4C345D26BDC994 /* Pods_DinDin_Food_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DD86915F725EA975A9D9F4 /* Pods_DinDin_Food_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +136,18 @@
 		43D5B6D02566F60B00ECE161 /* DrinksRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksRouter.swift; sourceTree = "<group>"; };
 		43D5B6D52566F66400ECE161 /* DrinksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksPresenter.swift; sourceTree = "<group>"; };
 		43D5B6E42567322B00ECE161 /* CartOrdersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartOrdersModel.swift; sourceTree = "<group>"; };
+		43D5B6F925675DBC00ECE161 /* CheckOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutViewController.swift; sourceTree = "<group>"; };
+		43D5B7012567678500ECE161 /* CheckOutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutRouter.swift; sourceTree = "<group>"; };
+		43D5B706256767A300ECE161 /* CheckOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutInteractor.swift; sourceTree = "<group>"; };
+		43D5B70B256767B600ECE161 /* CheckOutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutPresenter.swift; sourceTree = "<group>"; };
+		43D5B71325676CC700ECE161 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		43D5B71D25676D4200ECE161 /* CartViewModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModelController.swift; sourceTree = "<group>"; };
+		43D5B72525676ECD00ECE161 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		43D5B72625676ECD00ECE161 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
+		43D5B72C2567D82800ECE161 /* CartContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartContainerViewController.swift; sourceTree = "<group>"; };
+		43D5B7312567D85400ECE161 /* CartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartInteractor.swift; sourceTree = "<group>"; };
+		43D5B7362567D96F00ECE161 /* CartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRouter.swift; sourceTree = "<group>"; };
+		43D5B7462567DC3400ECE161 /* CartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPresenter.swift; sourceTree = "<group>"; };
 		4D430E68FB8FDD91579268C2 /* Pods_DinDin_Food_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DinDin_Food_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B237F0554F7F05DF60D8815 /* Pods-DinDin Food App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDin Food App.release.xcconfig"; path = "Target Support Files/Pods-DinDin Food App/Pods-DinDin Food App.release.xcconfig"; sourceTree = "<group>"; };
 		8BA46AF3B4ACD9ED6D4EA88C /* Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig"; path = "Target Support Files/Pods-DinDin Food App-DinDin Food AppUITests/Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +210,8 @@
 		43D5B57C2565441500ECE161 /* DinDin Food App */ = {
 			isa = PBXGroup;
 			children = (
+				43D5B71025676C6000ECE161 /* CartModule */,
+				43D5B6F825675D9700ECE161 /* CheckOutModule */,
 				43D5B6A52566EEDB00ECE161 /* DrinksModule */,
 				43D5B66F2566DDBE00ECE161 /* SushiModule */,
 				43D5B6342566160600ECE161 /* PizzaModule */,
@@ -402,6 +428,56 @@
 			path = DrinksViewModelController;
 			sourceTree = "<group>";
 		};
+		43D5B6F825675D9700ECE161 /* CheckOutModule */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B6F925675DBC00ECE161 /* CheckOutViewController.swift */,
+				43D5B7012567678500ECE161 /* CheckOutRouter.swift */,
+				43D5B706256767A300ECE161 /* CheckOutInteractor.swift */,
+				43D5B70B256767B600ECE161 /* CheckOutPresenter.swift */,
+			);
+			path = CheckOutModule;
+			sourceTree = "<group>";
+		};
+		43D5B71025676C6000ECE161 /* CartModule */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B71C25676D2500ECE161 /* CartViewModelController */,
+				43D5B71B25676D1600ECE161 /* CartView */,
+				43D5B71225676CB500ECE161 /* CartViewModel */,
+				43D5B72C2567D82800ECE161 /* CartContainerViewController.swift */,
+				43D5B7312567D85400ECE161 /* CartInteractor.swift */,
+				43D5B7362567D96F00ECE161 /* CartRouter.swift */,
+				43D5B7462567DC3400ECE161 /* CartPresenter.swift */,
+			);
+			path = CartModule;
+			sourceTree = "<group>";
+		};
+		43D5B71225676CB500ECE161 /* CartViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B71325676CC700ECE161 /* CartViewModel.swift */,
+			);
+			path = CartViewModel;
+			sourceTree = "<group>";
+		};
+		43D5B71B25676D1600ECE161 /* CartView */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B72525676ECD00ECE161 /* CartTableViewCell.swift */,
+				43D5B72625676ECD00ECE161 /* CartTableViewCell.xib */,
+			);
+			path = CartView;
+			sourceTree = "<group>";
+		};
+		43D5B71C25676D2500ECE161 /* CartViewModelController */ = {
+			isa = PBXGroup;
+			children = (
+				43D5B71D25676D4200ECE161 /* CartViewModelController.swift */,
+			);
+			path = CartViewModelController;
+			sourceTree = "<group>";
+		};
 		5AAE4BC493EE0E2C5A54B03D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,6 +611,7 @@
 			files = (
 				43D5B6922566E1F300ECE161 /* SushiTableViewCell.xib in Resources */,
 				43D5B6392566163B00ECE161 /* PizzaTableViewCell.xib in Resources */,
+				43D5B72825676ECD00ECE161 /* CartTableViewCell.xib in Resources */,
 				43D5B6B22566F1A600ECE161 /* DrinksTableViewCell.xib in Resources */,
 				43D5B58A2565441A00ECE161 /* LaunchScreen.storyboard in Resources */,
 				43D5B5872565441A00ECE161 /* Assets.xcassets in Resources */,
@@ -670,7 +747,9 @@
 				43D5B5CA256583A100ECE161 /* HomeRouter.swift in Sources */,
 				43D5B640256618E100ECE161 /* PizzaModel.swift in Sources */,
 				43D5B5DD256585B900ECE161 /* PromoOffersModel.swift in Sources */,
+				43D5B71E25676D4200ECE161 /* CartViewModelController.swift in Sources */,
 				43D5B64E256619D100ECE161 /* PizzaViewModelController.swift in Sources */,
+				43D5B7472567DC3400ECE161 /* CartPresenter.swift in Sources */,
 				43D5B5E5256586EF00ECE161 /* HomeModuleBuilder.swift in Sources */,
 				43D5B57E2565441500ECE161 /* AppDelegate.swift in Sources */,
 				43D5B5802565441500ECE161 /* SceneDelegate.swift in Sources */,
@@ -678,26 +757,35 @@
 				43D5B6E52567322C00ECE161 /* CartOrdersModel.swift in Sources */,
 				43D5B6892566DFEA00ECE161 /* SushiViewModelController.swift in Sources */,
 				43D5B5C5256582D000ECE161 /* HomePresenter.swift in Sources */,
+				43D5B707256767A300ECE161 /* CheckOutInteractor.swift in Sources */,
+				43D5B6FA25675DBC00ECE161 /* CheckOutViewController.swift in Sources */,
 				43D5B6B82566F24200ECE161 /* DrinksModel.swift in Sources */,
 				43D5B6482566198300ECE161 /* PizzaViewModel.swift in Sources */,
 				43D5B6832566DF6A00ECE161 /* SushiViewModel.swift in Sources */,
 				43D5B69C2566E3C800ECE161 /* SushiRouter.swift in Sources */,
 				43D5B6652566203E00ECE161 /* PizzaInteractor.swift in Sources */,
+				43D5B7372567D96F00ECE161 /* CartRouter.swift in Sources */,
 				43D5B6A12566E3DB00ECE161 /* SushiInteractor.swift in Sources */,
+				43D5B72725676ECD00ECE161 /* CartTableViewCell.swift in Sources */,
+				43D5B7022567678500ECE161 /* CheckOutRouter.swift in Sources */,
 				43D5B67A2566DF0200ECE161 /* SushiModel.swift in Sources */,
 				43D5B6912566E1F300ECE161 /* SushiTableViewCell.swift in Sources */,
 				43D5B5BF25657D5D00ECE161 /* HomeViewController.swift in Sources */,
 				43D5B65B25661FA300ECE161 /* PizzaPresenter.swift in Sources */,
 				43D5B6D62566F66400ECE161 /* DrinksPresenter.swift in Sources */,
+				43D5B70C256767B600ECE161 /* CheckOutPresenter.swift in Sources */,
 				43D5B5CF256583FB00ECE161 /* HomeInteractor.swift in Sources */,
 				43D5B6972566E38100ECE161 /* SushiPresenter.swift in Sources */,
 				43D5B6CC2566F58800ECE161 /* DrinksInteractor.swift in Sources */,
+				43D5B7322567D85400ECE161 /* CartInteractor.swift in Sources */,
 				43D5B6B12566F1A600ECE161 /* DrinksTableViewCell.swift in Sources */,
 				43D5B6C42566F34200ECE161 /* DrinksViewModelController.swift in Sources */,
 				43D5B6AA2566EFC000ECE161 /* DrinksContainerViewController.swift in Sources */,
 				43D5B6712566DDF300ECE161 /* SushiContainerViewController.swift in Sources */,
 				43D5B6D12566F60B00ECE161 /* DrinksRouter.swift in Sources */,
 				43D5B6242565E40800ECE161 /* PromoPackagesService.swift in Sources */,
+				43D5B71425676CC700ECE161 /* CartViewModel.swift in Sources */,
+				43D5B72D2567D82800ECE161 /* CartContainerViewController.swift in Sources */,
 				43D5B61F2565D86300ECE161 /* Constants.swift in Sources */,
 				43D5B630256613E600ECE161 /* PizzaContainerViewController.swift in Sources */,
 				43D5B6BE2566F2DF00ECE161 /* DrinksViewModel.swift in Sources */,

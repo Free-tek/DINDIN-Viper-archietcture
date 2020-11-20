@@ -92,19 +92,11 @@ extension PizzaContainerViewController: UITableViewDelegate, UITableViewDataSour
             
             cell.buyPizza.rx.tap
                 .bind {
-
-                    let order = OrderModel(orderName: viewModel.pizzaName, orderImage: viewModel.pizzaImage, orderStoreId: viewModel.pizzaStoreId, orderPrice: viewModel.pizzaPrice)
                     
-                    //add orderedDrink to orders
-                    let newValue =  CartOrdersModel.seeOrders.orders.value + [order]
-                    CartOrdersModel.seeOrders.orders.accept(newValue)
-                    
-                    
-                    
-                    cell.buyPizza.backgroundColor = UIColor.green
+                    self.takeOrder_Animate(viewModel: viewModel, sender: cell.buyPizza)
                     
                 }
-                .disposed(by: disposeBag)
+                .disposed(by: cell.disposeBag)
         }
         
         
@@ -114,6 +106,25 @@ extension PizzaContainerViewController: UITableViewDelegate, UITableViewDataSour
         return cell
     }
 
+    func takeOrder_Animate(viewModel: PizzaViewModel, sender: UIButton){
+        
+        let order = OrderModel(orderName: viewModel.pizzaName, orderImage: viewModel.pizzaImage, orderStoreId: viewModel.pizzaStoreId, orderPrice: viewModel.pizzaPrice)
+        let newValue =  CartOrdersModel.seeOrders.orders.value + [order]
+        CartOrdersModel.seeOrders.orders.accept(newValue)
+        
+        sender.backgroundColor = UIColor.green
+        sender.setTitle("added + 1", for: .normal)
+        
+        Observable<Int>.interval(.milliseconds(30), scheduler: MainScheduler.instance)
+            .map { 30 - $0 }
+            .takeUntil(.inclusive, predicate: { $0 == 0 })
+            .subscribe(onNext: { value in
+            }, onCompleted: {
+                sender.backgroundColor = UIColor.black
+                sender.setTitle("\(viewModel.pizzaPrice!) USD", for: .normal)
+            }).disposed(by: self.disposeBag)
+        
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 400
     }

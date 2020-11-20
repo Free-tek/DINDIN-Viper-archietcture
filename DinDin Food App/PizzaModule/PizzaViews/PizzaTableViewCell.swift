@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class PizzaTableViewCell: UITableViewCell {
 
@@ -17,7 +19,7 @@ class PizzaTableViewCell: UITableViewCell {
     
     static let cellIdentifier = "PizzaTableViewCell"
     
-    
+    var disposeBag = DisposeBag()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,6 +35,7 @@ class PizzaTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        disposeBag = DisposeBag()
                 
     }
     
@@ -53,7 +56,7 @@ class PizzaTableViewCell: UITableViewCell {
         
         pizzaName.text = viewModel.pizzaName!
         pizzaDescriptton.text = viewModel.pizzaDescription!
-        buyPizza.setTitle(viewModel.pizzaDescription, for: .normal)
+        buyPizza.setTitle("\(viewModel.pizzaPrice!) USD", for: .normal)
         pizzaPrice.text = viewModel.pizzaStoreId!
 
     }

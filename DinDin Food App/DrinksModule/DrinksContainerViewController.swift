@@ -102,19 +102,11 @@ extension DrinksContainerViewController: UITableViewDelegate, UITableViewDataSou
             
             cell.buyDrink.rx.tap
                 .bind {
-
-                    let order = OrderModel(orderName: viewModel.drinksName, orderImage: viewModel.drinksImage, orderStoreId: viewModel.drinksStoreId, orderPrice: viewModel.drinksPrice)
                     
-                    
-                    let newValue =  CartOrdersModel.seeOrders.orders.value + [order]
-                    CartOrdersModel.seeOrders.orders.accept(newValue)
-                    
-                    
-                    
-                    cell.buyDrink.backgroundColor = UIColor.green
+                    self.takeOrder_Animate(viewModel: viewModel, sender: cell.buyDrink)
                     
                 }
-                .disposed(by: disposeBag)
+                .disposed(by: cell.disposeBag)
             
             
            
@@ -134,6 +126,26 @@ extension DrinksContainerViewController: UITableViewDelegate, UITableViewDataSou
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    func takeOrder_Animate(viewModel: DrinksViewModel, sender: UIButton){
+        
+        let order = OrderModel(orderName: viewModel.drinksName, orderImage: viewModel.drinksImage, orderStoreId: viewModel.drinksStoreId, orderPrice: viewModel.drinksPrice)
+        let newValue =  CartOrdersModel.seeOrders.orders.value + [order]
+        CartOrdersModel.seeOrders.orders.accept(newValue)
+        
+        sender.backgroundColor = UIColor.green
+        sender.setTitle("added + 1", for: .normal)
+        
+        Observable<Int>.interval(.milliseconds(25), scheduler: MainScheduler.instance)
+            .map { 25 - $0 }
+            .takeUntil(.inclusive, predicate: { $0 == 0 })
+            .subscribe(onNext: { value in
+            }, onCompleted: {
+                sender.backgroundColor = UIColor.black
+                sender.setTitle("\(viewModel.drinksPrice!) USD", for: .normal)
+            }).disposed(by: self.disposeBag)
         
     }
     

@@ -89,6 +89,9 @@ class HomeViewController: UIViewController {
     }
     
 
+    @IBAction func toCartsPage(_ sender: Any) {
+        presenter.eventToCarts()
+    }
     
     
 }
@@ -166,20 +169,16 @@ extension HomeViewController: HomeView{
         .subscribe(onNext: {
           [unowned self] orders in
             
-            
+            self.pulseAnimation(item: orderCount)
             
             if orders.count > 50{
-                
                 orderCount.text = "50+"
             }else if orders.count > 0{
                 orderCount.alpha = 1
                 cartsButtton.alpha = 1
                 orderCount.text = "\(orders.count)"
             }
-            
-            
-            
-          
+        
         })
         .disposed(by: disposeBag)
     }
@@ -282,6 +281,29 @@ extension HomeViewController: HomeView{
         pagerView.setCarouselOpaque(layer: false, describedTitle: false, pageIndicator: false)
         pagerView.setCarouselLayout(displayStyle: 0, pageIndicatorPositon: 2, pageIndicatorColor: nil, describedTitleColor: nil, layerColor: UIColor.clear)
         
+    }
+    
+    func pulseAnimation(item: UILabel){
+        
+        
+    
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.duration = 0.5
+        pulse.fromValue = 1.0
+        pulse.toValue = 1.12
+        pulse.autoreverses = true
+        pulse.repeatCount = 1
+        pulse.initialVelocity = 0.5
+        pulse.damping = 0.8
+
+        let animationGroup = CAAnimationGroup()
+        animationGroup.duration = 2.7
+        animationGroup.repeatCount = 1
+        animationGroup.animations = [pulse]
+
+        item.layer.add(animationGroup, forKey: "pulse")
+            
+            
     }
     
     

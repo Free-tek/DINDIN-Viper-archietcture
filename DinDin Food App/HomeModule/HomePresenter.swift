@@ -10,6 +10,8 @@ import Foundation
 protocol HomePresentation {
     
     func viewDidLoad() -> Void
+    
+    func eventToCarts() -> Void
 
 } 
 
@@ -47,10 +49,10 @@ extension HomePresenter: HomePresentation{
             
             
         })
-
-
         
-        
-        
+    }
+    
+    func eventToCarts(){
+        router.navigateToCartsViewController()
     }
 }

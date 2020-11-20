@@ -1,7 +1,6 @@
 PODS:
   - AACarousel (1.1.1)
   - Alamofire (5.2.2)
-  - JJFloatingActionButton (2.5.0)
   - Kingfisher (5.15.6):
     - Kingfisher/Core (= 5.15.6)
   - Kingfisher/Core (5.15.6)
@@ -20,7 +19,6 @@ PODS:
 DEPENDENCIES:
   - AACarousel
   - Alamofire
-  - JJFloatingActionButton
   - Kingfisher
   - Moya (~> 14.0)
   - RxCocoa (= 6.0.0-rc.1)
@@ -31,7 +29,6 @@ SPEC REPOS:
   trunk:
     - AACarousel
     - Alamofire
-    - JJFloatingActionButton
     - Kingfisher
     - Moya
     - RxCocoa
@@ -42,7 +39,6 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AACarousel: e0dbd2d3153c56c36df8aa282553f20fc88e132b
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
-  JJFloatingActionButton: fdc3aefb0f28f04d0f988fa25d5fac97028a9ea7
   Kingfisher: b3554e7bf6106115b44e8795300bad580ef2fdc7
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   RxCocoa: a28d75145c07b7547b85faf1e1ad8b25af88a752
@@ -50,6 +46,6 @@ SPEC CHECKSUMS:
   RxSwift: dae1a32c48148897494b9e2a6b00a68b40694236
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: dc1b48d839d348b30ff40088bc54d2426ae92c2c
+PODFILE CHECKSUM: 159e20916266a2e50dfe815d47d5d2533ff1f3c9
 
 COCOAPODS: 1.10.0.rc.1

@@ -25,7 +25,8 @@ target 'DinDin Food App' do
   #Reactive programming package
   pod 'RxSwift', '6.0.0-rc.1'
   pod 'RxCocoa', '6.0.0-rc.1'
-
+  
+  
   target 'DinDin Food AppTests' do
     inherit! :search_paths
     # Pods for testing
