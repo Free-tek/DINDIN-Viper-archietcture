@@ -55,9 +55,7 @@ class DrinksTableViewCell: UITableViewCell {
         
         drinkImage.setImage(with: viewModel.drinksImage!)
         
-        
-        drinkImage.layer.cornerRadius = 10
-        drinkImage.layer.masksToBounds = true
+        drinkImage.roundCornersImage([.topRight, .topLeft], radius: 10)
         
         drinkName.text = viewModel.drinksName!
         drinkDescription.text = viewModel.drinksDescription!

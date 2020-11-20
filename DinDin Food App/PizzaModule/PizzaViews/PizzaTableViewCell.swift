@@ -53,6 +53,7 @@ class PizzaTableViewCell: UITableViewCell {
         
         pizzaImage.setImage(with: viewModel.pizzaImage!)
         
+        pizzaImage.roundCornersImage([.topRight, .topLeft], radius: 10)
         
         pizzaName.text = viewModel.pizzaName!
         pizzaDescriptton.text = viewModel.pizzaDescription!

@@ -11,6 +11,8 @@ protocol CheckOutPresentation {
     
     func viewDidLoad() -> Void
     
+    func backToMenu() -> Void
+    
 
 }
 
@@ -39,6 +41,10 @@ extension CheckOutPresenter: CheckOutPresentation{
         
         }
         
+    }
+    
+    func backToMenu(){
+        router.navigateBackToMenu()
     }
     
     

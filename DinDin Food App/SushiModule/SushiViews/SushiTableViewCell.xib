@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G3l-A7-dOO">
-                        <rect key="frame" x="16" y="16" width="288" height="245"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="261"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="288" id="PTN-Cj-tKw"/>
-                            <constraint firstAttribute="height" constant="245" id="Po7-L8-I0W"/>
+                            <constraint firstAttribute="width" constant="320" id="PTN-Cj-tKw"/>
+                            <constraint firstAttribute="height" constant="261" id="Po7-L8-I0W"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rsx-BR-Jwb">
@@ -91,12 +91,12 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="G3l-A7-dOO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="C2Y-Dk-nGd"/>
-                    <constraint firstAttribute="trailing" secondItem="G3l-A7-dOO" secondAttribute="trailing" constant="16" id="ENF-Pm-A3E"/>
+                    <constraint firstItem="G3l-A7-dOO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="C2Y-Dk-nGd"/>
+                    <constraint firstAttribute="trailing" secondItem="G3l-A7-dOO" secondAttribute="trailing" id="ENF-Pm-A3E"/>
                     <constraint firstItem="Rsx-BR-Jwb" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Kmg-b3-553"/>
                     <constraint firstItem="Rsx-BR-Jwb" firstAttribute="top" secondItem="G3l-A7-dOO" secondAttribute="bottom" constant="15" id="WBa-Q7-CsY"/>
                     <constraint firstItem="Rsx-BR-Jwb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="gMT-NL-pwC"/>
-                    <constraint firstItem="G3l-A7-dOO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="naM-89-3B2"/>
+                    <constraint firstItem="G3l-A7-dOO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="naM-89-3B2"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Rsx-BR-Jwb" secondAttribute="bottom" constant="17" id="rPQ-c2-jwJ"/>
                 </constraints>
             </tableViewCellContentView>

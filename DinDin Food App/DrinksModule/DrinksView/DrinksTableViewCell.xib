@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UlJ-2a-j7I">
-                        <rect key="frame" x="16" y="16" width="288" height="245"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="261"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="245" id="Z16-bt-Ixi"/>
-                            <constraint firstAttribute="width" constant="288" id="k9t-sV-xTd"/>
+                            <constraint firstAttribute="height" constant="261" id="Z16-bt-Ixi"/>
+                            <constraint firstAttribute="width" constant="320" id="k9t-sV-xTd"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ear-Ur-Ivp">
@@ -92,12 +92,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="Ear-Ur-Ivp" firstAttribute="top" secondItem="UlJ-2a-j7I" secondAttribute="bottom" constant="15" id="8V4-7F-Tr8"/>
-                    <constraint firstItem="Ear-Ur-Ivp" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="IKj-CA-TuA"/>
-                    <constraint firstItem="UlJ-2a-j7I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Pfi-Be-z0F"/>
-                    <constraint firstItem="UlJ-2a-j7I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="eCy-Wb-uvi"/>
-                    <constraint firstAttribute="trailing" secondItem="UlJ-2a-j7I" secondAttribute="trailing" constant="16" id="n4k-Ny-TkX"/>
+                    <constraint firstItem="UlJ-2a-j7I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Pfi-Be-z0F"/>
+                    <constraint firstItem="Ear-Ur-Ivp" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="XAg-lk-Xox"/>
+                    <constraint firstItem="Ear-Ur-Ivp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="YPh-a6-QTO"/>
+                    <constraint firstItem="UlJ-2a-j7I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eCy-Wb-uvi"/>
+                    <constraint firstAttribute="trailing" secondItem="UlJ-2a-j7I" secondAttribute="trailing" id="n4k-Ny-TkX"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Ear-Ur-Ivp" secondAttribute="bottom" constant="17" id="wJq-58-Y6R"/>
-                    <constraint firstItem="Ear-Ur-Ivp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="xuA-0h-iwP"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -108,7 +108,7 @@
                 <outlet property="drinkName" destination="CPb-e9-zBs" id="vvQ-PP-VSS"/>
                 <outlet property="drinkPrice" destination="QaB-Er-eTJ" id="frq-m0-42s"/>
             </connections>
-            <point key="canvasLocation" x="28" y="104"/>
+            <point key="canvasLocation" x="27.536231884057973" y="103.79464285714285"/>
         </tableViewCell>
     </objects>
 </document>

@@ -44,7 +44,7 @@ extension PizzaPresenter: PizzaPresentation{
                 self!.view?.setUpTableView()
                 
             }
-            print("result here: \(result)")
+           
         })
     }
 }

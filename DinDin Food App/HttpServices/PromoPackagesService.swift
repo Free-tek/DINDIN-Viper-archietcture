@@ -49,7 +49,7 @@ class PromoPackagesService {
                 
                 
             case .failure(let error):
-                print("fetch promoBanner error: \(error)")
+                
                 completion(self.promoOffersBannerImageList)
                 
             }

@@ -56,9 +56,8 @@ class SushiTableViewCell: UITableViewCell {
         
         sushiImage.setImage(with: viewModel.susshiImage!)
         
-        
-        sushiImage.layer.cornerRadius = 10
-        sushiImage.layer.masksToBounds = true
+        sushiImage.roundCornersImage([.topRight, .topLeft], radius: 10)
+  
         
         sushiName.text = viewModel.susshiName!
         sushiDescription.text = viewModel.susshiDescription!

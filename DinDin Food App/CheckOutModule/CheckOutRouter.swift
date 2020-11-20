@@ -9,7 +9,8 @@ import UIKit
 
 protocol CheckOutRouting{
     
-   
+   func navigateBackToMenu() -> Void
+    
 }
 class CheckOutRouter {
     
@@ -21,5 +22,10 @@ class CheckOutRouter {
     
 }
 extension CheckOutRouter: CheckOutRouting{
+ 
+    func navigateBackToMenu(){
+        currentViewController.dismiss(animated: false, completion: nil)
+    }
+    
     
 }

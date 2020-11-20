@@ -172,40 +172,6 @@ extension CartContainerViewController: UITableViewDelegate, UITableViewDataSourc
                     
                 }
                 .disposed(by: cell.disposeBag)
-            
-            
-//            cell.cancelOrder.rx.tap
-//                .bind {
-//
-//                    print("just got clicked \(self.count)")
-//                    self.count = self.count + 1
-
-//                    if CartOrdersModel.seeOrders.orders.value.count > 0{
-//
-////                        var newValue = CartOrdersModel.seeOrders.orders.value
-////                        print("this are your orders \(newValue) :: count- \(CartOrdersModel.seeOrders.orders.value.count) :: index- \(indexPath.row)")
-////
-////                        newValue.remove(at: indexPath.row)
-////                        CartOrdersModel.seeOrders.orders.accept(newValue)
-////
-//
-//                        print("this are your viewmodel orders \(self.cartViewModelController.viewModels.value)")
-//                        var _newValue =  self.cartViewModelController.viewModels.value
-//                        _newValue.remove(at: indexPath.row)
-//                        self.cartViewModelController.viewModels.accept(_newValue)
-//
-//                        self.cartTableView.beginUpdates()
-//                        self.cartTableView.deleteRows(at: [indexPath], with: .automatic)
-//                        self.cartTableView.endUpdates()
-
-
-
-                        //cartViewModelController.viewModels.remove(at: indexPath.row)
-
-                    //}
-
-//                }
-//                .disposed(by: disposeBag)
        
         }
         

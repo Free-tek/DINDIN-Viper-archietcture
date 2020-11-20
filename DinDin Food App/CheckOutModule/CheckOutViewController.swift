@@ -22,6 +22,7 @@ class CheckOutViewController: UIViewController {
     @IBOutlet weak var tab2Header: UILabel!
     @IBOutlet weak var tab3Header: UILabel!
     
+    @IBOutlet weak var backToMenuButton: UIButton!
     @IBOutlet weak var payForOrder: UIButton!
     
     var presenter: CheckOutPresentation!
@@ -48,7 +49,10 @@ class CheckOutViewController: UIViewController {
         self.presenter.viewDidLoad()
     }
     
-
+    @IBAction func backToMenuFunction(_ sender: Any) {
+        self.presenter.backToMenu()
+    }
+    
 }
 
 
@@ -59,7 +63,6 @@ extension CheckOutViewController: CheckOutView{
         tab1Header.textColor = UIColor.black
         tab2Header.textColor = UIColor.gray
         tab3Header.textColor = UIColor.gray
-        
         
         payForOrder.layer.cornerRadius = payForOrder.frame.width/2
         payForOrder.layer.shadowOpacity = 0.3
@@ -163,4 +166,5 @@ extension CheckOutViewController: CheckOutView{
         }
     }
     
+   
 }

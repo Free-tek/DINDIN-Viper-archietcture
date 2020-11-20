@@ -90,7 +90,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="cancel" width="16.666666030883789" height="16.666666030883789"/>
+        <image name="cancel" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

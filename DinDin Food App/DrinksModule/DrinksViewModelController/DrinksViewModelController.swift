@@ -8,11 +8,13 @@
 import Foundation
 import Moya
 import SwiftyJSON
+import RxCocoa
+import RxSwift
 
 
 class DrinksViewModelController{
     
-    var viewModels: [DrinksViewModel?] = []
+    var viewModels: BehaviorRelay<[DrinksViewModel?]> = BehaviorRelay(value: [])
     
     func FetchDrinksData(completion: @escaping (_ success: Bool) -> ()){
         let service = MoyaProvider<FetchDrinksServiceAPI.FetchDrinksProvider>()
@@ -45,7 +47,7 @@ class DrinksViewModelController{
                             drinksModel.append(itemGotten)
                         }
 
-                        self.viewModels = self.initViewModels(drinksModel)
+                        self.viewModels = BehaviorRelay(value: self.initViewModels(drinksModel))
                         completion(true)
 
                     } else {
@@ -66,16 +68,16 @@ class DrinksViewModelController{
     }
     
     var viewModelsCount: Int {
-        return viewModels.count
+        return viewModels.value.count
     }
     
     var allViewModels: [DrinksViewModel?] {
-        return viewModels
+        return viewModels.value
     }
 
     func viewModel(at index: Int) -> DrinksViewModel? {
         guard index >= 0 && index < viewModelsCount else { return nil }
-        return viewModels[index]
+        return viewModels.value[index]
     }
 
 
@@ -132,4 +134,3 @@ enum FetchDrinksServiceAPI{
     }
     
 }
-
