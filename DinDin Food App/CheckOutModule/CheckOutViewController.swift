@@ -9,6 +9,12 @@ import UIKit
 
 protocol CheckOutView: class {
     func setUpElements() -> (Void)
+    func navigateToFirstTabLeft() -> (Void)
+    func navigateToSecondTabLeft() -> (Void)
+    func navigateToThirdTabLeft() -> (Void)
+    func navigateToFirstTabRight() -> (Void)
+    func navigateToSecondTabRight() -> (Void)
+    func navigateToThirdTabRight() -> (Void)
     
 }
 
@@ -88,37 +94,21 @@ extension CheckOutViewController: CheckOutView{
             
             if currentPageIndex == 2{
                 currentPageIndex = 0
-               
-                tab1Header.text = CheckOutPageTabs.cart.rawValue
-                tab2Header.text = CheckOutPageTabs.orders.rawValue
-                tab3Header.text = CheckOutPageTabs.information.rawValue
                 
+                presenter.toFirstTabLeft()
                 
-                informationContainerViewController.alpha = 0
-                cartContainerViewController.alpha = 1
                 
             }else if currentPageIndex == 1{
                 currentPageIndex = currentPageIndex + 1
                 
+                presenter.toThirdTabLeft()
                 
-                tab1Header.text = CheckOutPageTabs.information.rawValue
-                tab2Header.text = CheckOutPageTabs.cart.rawValue
-                tab3Header.text = CheckOutPageTabs.orders.rawValue
-                
-                
-                ordersContainerViewConntroller.alpha = 0
-                informationContainerViewController.alpha = 1
             
             }else if currentPageIndex == 0{
                 currentPageIndex = currentPageIndex + 1
                 
-                tab1Header.text = CheckOutPageTabs.orders.rawValue
-                tab2Header.text = CheckOutPageTabs.information.rawValue
-                tab3Header.text = CheckOutPageTabs.cart.rawValue
+                presenter.toSecondTabLeft()
                 
-                
-                cartContainerViewController.alpha = 0
-                ordersContainerViewConntroller.alpha = 1
                 
             }
            
@@ -128,42 +118,97 @@ extension CheckOutViewController: CheckOutView{
             
             if currentPageIndex == 0{
                 currentPageIndex = 2
-                
-                tab1Header.text = CheckOutPageTabs.information.rawValue
-                tab2Header.text = CheckOutPageTabs.cart.rawValue
-                tab3Header.text = CheckOutPageTabs.orders.rawValue
-                
-                
-                ordersContainerViewConntroller.alpha = 0
-                informationContainerViewController.alpha = 1
+                presenter.toThirdTabRight()
                 
             }else if currentPageIndex == 1{
                 currentPageIndex = currentPageIndex - 1
-                
-                tab1Header.text = CheckOutPageTabs.cart.rawValue
-                tab2Header.text = CheckOutPageTabs.orders.rawValue
-                tab3Header.text = CheckOutPageTabs.information.rawValue
-                
-                informationContainerViewController.alpha = 0
-                cartContainerViewController.alpha = 1
+                presenter.toFirstTabRight()
                 
             }else if currentPageIndex == 2{
                 currentPageIndex = currentPageIndex - 1
-                
-                tab1Header.text = CheckOutPageTabs.orders.rawValue
-                tab2Header.text = CheckOutPageTabs.information.rawValue
-                tab3Header.text = CheckOutPageTabs.cart.rawValue
-                
-                
-                cartContainerViewController.alpha = 0
-                ordersContainerViewConntroller.alpha = 1
-                
-                
+                presenter.toSecondTabRight()
                 
             }
           
             
         }
+    }
+    
+    
+    func navigateToFirstTabLeft(){
+        
+        tab1Header.text = CheckOutPageTabs.cart.rawValue
+        tab2Header.text = CheckOutPageTabs.orders.rawValue
+        tab3Header.text = CheckOutPageTabs.information.rawValue
+        
+        
+        informationContainerViewController.alpha = 0
+        cartContainerViewController.alpha = 1
+        
+    }
+    
+    
+    func navigateToSecondTabLeft(){
+        
+        tab1Header.text = CheckOutPageTabs.orders.rawValue
+        tab2Header.text = CheckOutPageTabs.information.rawValue
+        tab3Header.text = CheckOutPageTabs.cart.rawValue
+        
+        
+        cartContainerViewController.alpha = 0
+        ordersContainerViewConntroller.alpha = 1
+        
+    }
+    
+    func navigateToThirdTabLeft(){
+        
+        tab1Header.text = CheckOutPageTabs.information.rawValue
+        tab2Header.text = CheckOutPageTabs.cart.rawValue
+        tab3Header.text = CheckOutPageTabs.orders.rawValue
+        
+        
+        ordersContainerViewConntroller.alpha = 0
+        informationContainerViewController.alpha = 1
+       
+        
+    }
+    
+    func navigateToFirstTabRight(){
+        
+        tab1Header.text = CheckOutPageTabs.cart.rawValue
+        tab2Header.text = CheckOutPageTabs.orders.rawValue
+        tab3Header.text = CheckOutPageTabs.information.rawValue
+        
+        informationContainerViewController.alpha = 0
+        cartContainerViewController.alpha = 1
+       
+    }
+    
+    func navigateToSecondTabRight(){
+        
+        tab1Header.text = CheckOutPageTabs.information.rawValue
+        tab2Header.text = CheckOutPageTabs.cart.rawValue
+        tab3Header.text = CheckOutPageTabs.orders.rawValue
+        
+        
+        ordersContainerViewConntroller.alpha = 0
+        informationContainerViewController.alpha = 1
+        
+        
+        
+        
+    }
+    
+    func navigateToThirdTabRight(){
+        
+        tab1Header.text = CheckOutPageTabs.orders.rawValue
+        tab2Header.text = CheckOutPageTabs.information.rawValue
+        tab3Header.text = CheckOutPageTabs.cart.rawValue
+        
+        
+        cartContainerViewController.alpha = 0
+        ordersContainerViewConntroller.alpha = 1
+        
     }
     
    
