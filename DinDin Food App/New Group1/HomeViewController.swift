@@ -14,10 +14,14 @@ import RxCocoa
 protocol HomeView: class {
     
     func setUpElements() -> (Void)
-    
     func setUpPromoOffersView(promoBannerImages: [String]) -> (Void)
-    
     func setupTotalOrdersObserver() -> (Void)
+    func navigateToFirstTabLeft() -> (Void)
+    func navigateToSecondTabLeft() -> (Void)
+    func navigateToThirdTabLeft() -> (Void)
+    func navigateToFirstTabRight() -> (Void)
+    func navigateToSecondTabRight() -> (Void)
+    func navigateToThirdTabRight() -> (Void)
 }
 
 class HomeViewController: UIViewController {
@@ -193,36 +197,18 @@ extension HomeViewController: HomeView{
             if currentPageIndex == 2{
                 currentPageIndex = 0
                
-                tabHeader1.text = HomePageTabs.pizza.rawValue
-                tabHeader2.text = HomePageTabs.sushi.rawValue
-                tabHeader3.text = HomePageTabs.drinks.rawValue
-                
-                
-                pizzaContainerViewTab.alpha = 1
-                DrinksContainerViewTab.alpha = 0
+                presenter.toFirstTabLeft()
                 
             }else if currentPageIndex == 1{
                 currentPageIndex = currentPageIndex + 1
                 
-                
-                tabHeader1.text = HomePageTabs.drinks.rawValue
-                tabHeader2.text = HomePageTabs.pizza.rawValue
-                tabHeader3.text = HomePageTabs.sushi.rawValue
-                
-                
-                sushiContainerViewTab.alpha = 0
-                DrinksContainerViewTab.alpha = 1
+                presenter.toThirdTabLeft()
             
             }else if currentPageIndex == 0{
                 currentPageIndex = currentPageIndex + 1
                 
-                tabHeader1.text = HomePageTabs.sushi.rawValue
-                tabHeader2.text = HomePageTabs.drinks.rawValue
-                tabHeader3.text = HomePageTabs.pizza.rawValue
+                presenter.toSecondTabLeft()
                 
-                
-                pizzaContainerViewTab.alpha = 0
-                sushiContainerViewTab.alpha = 1
                 
             }
            
@@ -234,37 +220,18 @@ extension HomeViewController: HomeView{
             if currentPageIndex == 0{
                 currentPageIndex = 2
                 
-                tabHeader1.text = HomePageTabs.drinks.rawValue
-                tabHeader2.text = HomePageTabs.pizza.rawValue
-                tabHeader3.text = HomePageTabs.sushi.rawValue
-                
-            
-                
-                DrinksContainerViewTab.alpha = 1
-                pizzaContainerViewTab.alpha = 0
+                presenter.toThirdTabRight()
                 
             }else if currentPageIndex == 1{
                 currentPageIndex = currentPageIndex - 1
                 
-                tabHeader1.text = HomePageTabs.pizza.rawValue
-                tabHeader2.text = HomePageTabs.sushi.rawValue
-                tabHeader3.text = HomePageTabs.drinks.rawValue
-                
-                pizzaContainerViewTab.alpha = 1
-                sushiContainerViewTab.alpha = 0
+                presenter.toFirstTabRight()
                 
                 
             }else if currentPageIndex == 2{
                 currentPageIndex = currentPageIndex - 1
                 
-                tabHeader1.text = HomePageTabs.sushi.rawValue
-                tabHeader2.text = HomePageTabs.drinks.rawValue
-                tabHeader3.text = HomePageTabs.pizza.rawValue
-                
-                sushiContainerViewTab.alpha = 1
-                DrinksContainerViewTab.alpha = 0
-                
-                
+                presenter.toSecondTabRight()
                 
                 
             }
@@ -310,6 +277,76 @@ extension HomeViewController: HomeView{
     }
     
     
+    func navigateToFirstTabLeft(){
+        
+        tabHeader1.text = HomePageTabs.pizza.rawValue
+        tabHeader2.text = HomePageTabs.sushi.rawValue
+        tabHeader3.text = HomePageTabs.drinks.rawValue
+        
+        
+        pizzaContainerViewTab.alpha = 1
+        DrinksContainerViewTab.alpha = 0
+        
+    }
+    
+    
+    func navigateToSecondTabLeft(){
+        
+        tabHeader1.text = HomePageTabs.sushi.rawValue
+        tabHeader2.text = HomePageTabs.drinks.rawValue
+        tabHeader3.text = HomePageTabs.pizza.rawValue
+        
+        
+        pizzaContainerViewTab.alpha = 0
+        sushiContainerViewTab.alpha = 1
+    }
+    
+    func navigateToThirdTabLeft(){
+        
+        tabHeader1.text = HomePageTabs.drinks.rawValue
+        tabHeader2.text = HomePageTabs.pizza.rawValue
+        tabHeader3.text = HomePageTabs.sushi.rawValue
+        
+        
+        sushiContainerViewTab.alpha = 0
+        DrinksContainerViewTab.alpha = 1
+        
+        
+    }
+    
+    func navigateToFirstTabRight(){
+        
+        tabHeader1.text = HomePageTabs.pizza.rawValue
+        tabHeader2.text = HomePageTabs.sushi.rawValue
+        tabHeader3.text = HomePageTabs.drinks.rawValue
+        
+        pizzaContainerViewTab.alpha = 1
+        sushiContainerViewTab.alpha = 0
+    }
+    
+    func navigateToSecondTabRight(){
+        
+        tabHeader1.text = HomePageTabs.sushi.rawValue
+        tabHeader2.text = HomePageTabs.drinks.rawValue
+        tabHeader3.text = HomePageTabs.pizza.rawValue
+        
+        sushiContainerViewTab.alpha = 1
+        DrinksContainerViewTab.alpha = 0
+        
+        
+    }
+    
+    func navigateToThirdTabRight(){
+        
+        tabHeader1.text = HomePageTabs.drinks.rawValue
+        tabHeader2.text = HomePageTabs.pizza.rawValue
+        tabHeader3.text = HomePageTabs.sushi.rawValue
+        
+    
+        
+        DrinksContainerViewTab.alpha = 1
+        pizzaContainerViewTab.alpha = 0
+    }
      
 }
 
