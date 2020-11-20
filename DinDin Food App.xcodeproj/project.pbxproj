@@ -51,6 +51,7 @@
 		43D5B6CC2566F58800ECE161 /* DrinksInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6CB2566F58800ECE161 /* DrinksInteractor.swift */; };
 		43D5B6D12566F60B00ECE161 /* DrinksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6D02566F60B00ECE161 /* DrinksRouter.swift */; };
 		43D5B6D62566F66400ECE161 /* DrinksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6D52566F66400ECE161 /* DrinksPresenter.swift */; };
+		43D5B6E52567322C00ECE161 /* CartOrdersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5B6E42567322B00ECE161 /* CartOrdersModel.swift */; };
 		5D0814C63A4C345D26BDC994 /* Pods_DinDin_Food_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DD86915F725EA975A9D9F4 /* Pods_DinDin_Food_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,7 @@
 		43D5B6CB2566F58800ECE161 /* DrinksInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksInteractor.swift; sourceTree = "<group>"; };
 		43D5B6D02566F60B00ECE161 /* DrinksRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksRouter.swift; sourceTree = "<group>"; };
 		43D5B6D52566F66400ECE161 /* DrinksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksPresenter.swift; sourceTree = "<group>"; };
+		43D5B6E42567322B00ECE161 /* CartOrdersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartOrdersModel.swift; sourceTree = "<group>"; };
 		4D430E68FB8FDD91579268C2 /* Pods_DinDin_Food_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DinDin_Food_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B237F0554F7F05DF60D8815 /* Pods-DinDin Food App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDin Food App.release.xcconfig"; path = "Target Support Files/Pods-DinDin Food App/Pods-DinDin Food App.release.xcconfig"; sourceTree = "<group>"; };
 		8BA46AF3B4ACD9ED6D4EA88C /* Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig"; path = "Target Support Files/Pods-DinDin Food App-DinDin Food AppUITests/Pods-DinDin Food App-DinDin Food AppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				43D5B5DC256585B900ECE161 /* PromoOffersModel.swift */,
+				43D5B6E42567322B00ECE161 /* CartOrdersModel.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -672,6 +675,7 @@
 				43D5B57E2565441500ECE161 /* AppDelegate.swift in Sources */,
 				43D5B5802565441500ECE161 /* SceneDelegate.swift in Sources */,
 				43D5B6382566163B00ECE161 /* PizzaTableViewCell.swift in Sources */,
+				43D5B6E52567322C00ECE161 /* CartOrdersModel.swift in Sources */,
 				43D5B6892566DFEA00ECE161 /* SushiViewModelController.swift in Sources */,
 				43D5B5C5256582D000ECE161 /* HomePresenter.swift in Sources */,
 				43D5B6B82566F24200ECE161 /* DrinksModel.swift in Sources */,

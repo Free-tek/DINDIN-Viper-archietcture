@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+
 
 protocol DrinksView: class {
     
     func setUpElements() -> (Void)
     func setUpTableView() -> (Void)
     func initViewModel(drinksViewModelController: DrinksViewModelController) -> (Void)
+
    
 
 }
@@ -25,6 +29,9 @@ class DrinksContainerViewController: UIViewController {
     
     var presenter: DrinksPresentation!
     var drinksViewModelController: DrinksViewModelController = DrinksViewModelController()
+    
+    var disposeBag = DisposeBag()
+    
     
     
     override func viewDidLoad() {
@@ -60,6 +67,8 @@ extension DrinksContainerViewController: DrinksView{
         drinksTableViewHeightConsttraint.constant = ScreenHeight
         drinksTableView.layoutIfNeeded()
         
+        
+        
     }
     
     func setUpTableView(){
@@ -71,6 +80,7 @@ extension DrinksContainerViewController: DrinksView{
     func initViewModel(drinksViewModelController: DrinksViewModelController){
         self.drinksViewModelController =  drinksViewModelController
     }
+    
     
 }
 
@@ -88,6 +98,28 @@ extension DrinksContainerViewController: UITableViewDelegate, UITableViewDataSou
         
         if let viewModel = drinksViewModelController.viewModel(at: indexPath.row) {
             cell.configure(with: viewModel)
+            
+            
+            cell.buyDrink.rx.tap
+                .bind {
+
+                    let order = OrderModel(orderName: viewModel.drinksName, orderImage: viewModel.drinksImage, orderStoreId: viewModel.drinksStoreId, orderPrice: viewModel.drinksPrice)
+                    
+                    
+                    let newValue =  CartOrdersModel.seeOrders.orders.value + [order]
+                    CartOrdersModel.seeOrders.orders.accept(newValue)
+                    
+                    
+                    
+                    cell.buyDrink.backgroundColor = UIColor.green
+                    
+                }
+                .disposed(by: disposeBag)
+            
+            
+           
+            
+        
         }
         
         
@@ -104,8 +136,6 @@ extension DrinksContainerViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
-
-
     
 }
 

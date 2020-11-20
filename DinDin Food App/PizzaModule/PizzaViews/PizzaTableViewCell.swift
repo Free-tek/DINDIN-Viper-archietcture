@@ -53,7 +53,8 @@ class PizzaTableViewCell: UITableViewCell {
         
         pizzaName.text = viewModel.pizzaName!
         pizzaDescriptton.text = viewModel.pizzaDescription!
-        pizzaPrice.text = " $\(viewModel.pizzaPrice!)"
+        buyPizza.setTitle(viewModel.pizzaDescription, for: .normal)
+        pizzaPrice.text = viewModel.pizzaStoreId!
 
     }
     

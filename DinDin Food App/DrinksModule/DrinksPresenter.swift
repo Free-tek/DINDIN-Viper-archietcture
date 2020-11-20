@@ -32,6 +32,8 @@ extension DrinksPresenter: DrinksPresentation{
     
     func viewDidLoad(){
         
+        
+        
         DispatchQueue.main.async {
             [weak self] in
             self!.view?.setUpElements()

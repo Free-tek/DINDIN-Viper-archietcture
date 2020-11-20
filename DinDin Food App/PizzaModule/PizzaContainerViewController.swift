@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 protocol PizzaView: class {
     
     func setUpElements() -> (Void)
     func setUpTableView() -> (Void)
     func initViewModel(pizzaViewModelController: PizzaViewModelController) -> (Void)
+    
     
 }
 
@@ -23,6 +26,8 @@ class PizzaContainerViewController: UIViewController {
 
     var presenter: PizzaPresentation!
     var pizzaViewModelController: PizzaViewModelController = PizzaViewModelController()
+    
+    var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +89,22 @@ extension PizzaContainerViewController: UITableViewDelegate, UITableViewDataSour
         
         if let viewModel = pizzaViewModelController.viewModel(at: indexPath.row) {
             cell.configure(with: viewModel)
+            
+            cell.buyPizza.rx.tap
+                .bind {
+
+                    let order = OrderModel(orderName: viewModel.pizzaName, orderImage: viewModel.pizzaImage, orderStoreId: viewModel.pizzaStoreId, orderPrice: viewModel.pizzaPrice)
+                    
+                    //add orderedDrink to orders
+                    let newValue =  CartOrdersModel.seeOrders.orders.value + [order]
+                    CartOrdersModel.seeOrders.orders.accept(newValue)
+                    
+                    
+                    
+                    cell.buyPizza.backgroundColor = UIColor.green
+                    
+                }
+                .disposed(by: disposeBag)
         }
         
         

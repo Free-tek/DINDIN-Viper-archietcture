@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 protocol SushiView: class {
     
@@ -24,6 +26,7 @@ class SushiContainerViewController: UIViewController {
     var presenter: SushiPresentation!
     var sushiViewModelController: SushiViewModelController = SushiViewModelController()
     
+    var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +90,23 @@ extension SushiContainerViewController: UITableViewDelegate, UITableViewDataSour
         
         if let viewModel = sushiViewModelController.viewModel(at: indexPath.row) {
             cell.configure(with: viewModel)
+            
+            cell.buySushiButton.rx.tap
+                .bind {
+
+                    let order = OrderModel(orderName: viewModel.susshiName, orderImage: viewModel.susshiImage, orderStoreId: viewModel.susshiStoreId, orderPrice: viewModel.susshiPrice)
+                    
+                    
+                    let newValue =  CartOrdersModel.seeOrders.orders.value + [order]
+                    CartOrdersModel.seeOrders.orders.accept(newValue)
+                    
+                    
+                    
+                    cell.buySushiButton.backgroundColor = UIColor.green
+                    
+                }
+                .disposed(by: disposeBag)
+            
         }
         
         

@@ -26,10 +26,6 @@ target 'DinDin Food App' do
   pod 'RxSwift', '6.0.0-rc.1'
   pod 'RxCocoa', '6.0.0-rc.1'
 
-  #Tab
-  pod 'Tabman', '~> 2.9'
-
-
   target 'DinDin Food AppTests' do
     inherit! :search_paths
     # Pods for testing

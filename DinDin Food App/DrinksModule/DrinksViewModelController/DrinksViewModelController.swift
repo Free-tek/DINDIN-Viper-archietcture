@@ -37,7 +37,7 @@ class DrinksViewModelController{
                             let drinksName = json["result"][i]["food_name"].string
                             let drinksDescription = json["result"][0]["food_description"].string
                             let drinksPrice = json["result"][i]["food_price"].int
-                            let drinksStoreId =  "sushiSK\(i)"
+                            let drinksStoreId =  "DK\(i)"
                             
                             
                             let itemGotten = DrinksModel(drinksName: drinksName, drinksImage: drinksImage, drinksDescription: drinksDescription, drinksStoreId: drinksStoreId, drinksPrice: drinksPrice)

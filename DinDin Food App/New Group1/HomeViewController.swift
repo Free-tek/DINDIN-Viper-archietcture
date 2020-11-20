@@ -8,12 +8,16 @@
 import UIKit
 import AACarousel
 import Kingfisher
+import RxSwift
+import RxCocoa
 
 protocol HomeView: class {
     
     func setUpElements() -> (Void)
     
     func setUpPromoOffersView(promoBannerImages: [String]) -> (Void)
+    
+    func setupTotalOrdersObserver() -> (Void)
 }
 
 class HomeViewController: UIViewController {
@@ -49,8 +53,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var pagerView: AACarousel!
     
     
+    @IBOutlet weak var cartsButtton: UIButton!
+    @IBOutlet weak var orderCount: UILabel!
+    
     var presenter: HomePresentation!
     var pizzaContainerViewController: PizzaContainerViewController!
+    
+    var disposeBag = DisposeBag()
     
     enum HomePageTabs: String {
        case pizza = "Pizza"
@@ -88,6 +97,22 @@ extension HomeViewController: HomeView{
     
     
     func setUpElements(){
+        
+        orderCount.alpha = 0
+        cartsButtton.alpha = 0
+        
+        orderCount.backgroundColor = UIColor.green
+        orderCount.layer.cornerRadius = orderCount.frame.width/2
+        orderCount.layer.masksToBounds = true
+        
+        cartsButtton.layer.cornerRadius = cartsButtton.frame.width/2
+        cartsButtton.layer.shadowOpacity = 0.3
+        cartsButtton.layer.shadowRadius = 4
+        cartsButtton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cartsButtton.layer.shadowColor = UIColor.black.cgColor
+        
+        
+
         
         pagerView.layer.contents = #imageLiteral(resourceName: "default1").cgImage
         
@@ -135,6 +160,30 @@ extension HomeViewController: HomeView{
     
         
     }
+    
+    func setupTotalOrdersObserver() {
+        CartOrdersModel.seeOrders.orders.asObservable()
+        .subscribe(onNext: {
+          [unowned self] orders in
+            
+            
+            
+            if orders.count > 50{
+                
+                orderCount.text = "50+"
+            }else if orders.count > 0{
+                orderCount.alpha = 1
+                cartsButtton.alpha = 1
+                orderCount.text = "\(orders.count)"
+            }
+            
+            
+            
+          
+        })
+        .disposed(by: disposeBag)
+    }
+    
     
     @objc func swipeMade(_ sender: UISwipeGestureRecognizer) {
         if sender.direction == .left {

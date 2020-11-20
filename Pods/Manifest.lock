@@ -1,6 +1,7 @@
 PODS:
   - AACarousel (1.1.1)
   - Alamofire (5.2.2)
+  - JJFloatingActionButton (2.5.0)
   - Kingfisher (5.15.6):
     - Kingfisher/Core (= 5.15.6)
   - Kingfisher/Core (5.15.6)
@@ -8,7 +9,6 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
-  - Pageboy (3.6.2)
   - RxCocoa (6.0.0-rc.1):
     - RxRelay (= 6.0.0-rc.1)
     - RxSwift (= 6.0.0-rc.1)
@@ -16,44 +16,40 @@ PODS:
     - RxSwift (= 6.0.0-rc.1)
   - RxSwift (6.0.0-rc.1)
   - SwiftyJSON (5.0.0)
-  - Tabman (2.9.1):
-    - Pageboy (~> 3.6.0)
 
 DEPENDENCIES:
   - AACarousel
   - Alamofire
+  - JJFloatingActionButton
   - Kingfisher
   - Moya (~> 14.0)
   - RxCocoa (= 6.0.0-rc.1)
   - RxSwift (= 6.0.0-rc.1)
   - SwiftyJSON
-  - Tabman (~> 2.9)
 
 SPEC REPOS:
   trunk:
     - AACarousel
     - Alamofire
+    - JJFloatingActionButton
     - Kingfisher
     - Moya
-    - Pageboy
     - RxCocoa
     - RxRelay
     - RxSwift
     - SwiftyJSON
-    - Tabman
 
 SPEC CHECKSUMS:
   AACarousel: e0dbd2d3153c56c36df8aa282553f20fc88e132b
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  JJFloatingActionButton: fdc3aefb0f28f04d0f988fa25d5fac97028a9ea7
   Kingfisher: b3554e7bf6106115b44e8795300bad580ef2fdc7
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   RxCocoa: a28d75145c07b7547b85faf1e1ad8b25af88a752
   RxRelay: 56abad6d32f73567858506d08735fdb341935b9a
   RxSwift: dae1a32c48148897494b9e2a6b00a68b40694236
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
-  Tabman: 085d89c65be9e883629bdaf5b1453a6397e57846
 
-PODFILE CHECKSUM: b130ecd7e50c08330e0f1cb40e9b6d52771d1c6d
+PODFILE CHECKSUM: dc1b48d839d348b30ff40088bc54d2426ae92c2c
 
 COCOAPODS: 1.10.0.rc.1

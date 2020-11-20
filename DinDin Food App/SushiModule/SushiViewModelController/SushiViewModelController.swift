@@ -37,7 +37,7 @@ class SushiViewModelController{
                             let susshiName = json["result"][i]["food_name"].string
                             let susshiDescription = json["result"][0]["food_description"].string
                             let susshiPrice = json["result"][i]["food_price"].int
-                            let susshiStoreId =  "sushiSK\(i)"
+                            let susshiStoreId =  "SS\(i)"
                             
                             
                             let itemGotten = SushiModel(susshiName: susshiName, susshiImage: susshiImage, susshiDescription: susshiDescription, susshiStoreId: susshiStoreId, susshiPrice: susshiPrice)

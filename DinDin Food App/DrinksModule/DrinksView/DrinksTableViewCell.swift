@@ -57,7 +57,9 @@ class DrinksTableViewCell: UITableViewCell {
         
         drinkName.text = viewModel.drinksName!
         drinkDescription.text = viewModel.drinksDescription!
-        drinkPrice.text = " $\(viewModel.drinksPrice!)"
+        drinkPrice.text = "\(viewModel.drinksStoreId!)"
+        buyDrink.setTitle(" $\(viewModel.drinksPrice!)", for: .normal)
+        
 
     }
     

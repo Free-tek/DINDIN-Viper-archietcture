@@ -37,7 +37,7 @@ class PizzaViewModelController{
                             let pizzaName = json["result"][i]["food_name"].string
                             let pizzaDescription = json["result"][0]["food_description"].string
                             let pizzaPrice = json["result"][i]["food_price"].int
-                            let pizzaStoreId =  "pizzaSK\(i)"
+                            let pizzaStoreId =  "PZ\(i)"
                             
                             
                             let itemGotten = PizzaModel(pizzaName: pizzaName, pizzaImage: pizzaImage, pizzaDescription: pizzaDescription, pizzaStoreId: pizzaStoreId, pizzaPrice: pizzaPrice)

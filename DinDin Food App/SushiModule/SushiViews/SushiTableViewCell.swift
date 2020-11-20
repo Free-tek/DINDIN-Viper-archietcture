@@ -59,7 +59,8 @@ class SushiTableViewCell: UITableViewCell {
         
         sushiName.text = viewModel.susshiName!
         sushiDescription.text = viewModel.susshiDescription!
-        sushiPrice.text = " $\(viewModel.susshiPrice!)"
+        sushiPrice.text = viewModel.susshiStoreId
+        buySushiButton.setTitle("$\(viewModel.susshiPrice!)", for: .normal)
 
     }
     

@@ -35,6 +35,8 @@ extension HomePresenter: HomePresentation{
         DispatchQueue.main.async {
             [weak self] in
             self!.view?.setUpElements()
+            self!.view?.setupTotalOrdersObserver()
+            
         }
         
 
