@@ -28,7 +28,7 @@ class CartViewModelController{
       
         
         for item in viewModels.value{
-            total = total + (item?.orderPrice)!
+            total +=  (item?.orderPrice)!
         }
         
         return total

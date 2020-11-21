@@ -137,62 +137,91 @@ extension CheckOutViewController: CheckOutView{
     
     func navigateToFirstTabLeft(){
         
-        tab1Header.text = CheckOutPageTabs.cart.rawValue
-        tab2Header.text = CheckOutPageTabs.orders.rawValue
-        tab3Header.text = CheckOutPageTabs.information.rawValue
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { [weak self] in
+            
+            self!.tab1Header.text = CheckOutPageTabs.cart.rawValue
+            self!.tab2Header.text = CheckOutPageTabs.orders.rawValue
+            self!.tab3Header.text = CheckOutPageTabs.information.rawValue
+            
+        })
         
+        swapContainerViewsLeftSlide(slideOutView: informationContainerViewController, slideInView: cartContainerViewController)
         
-        informationContainerViewController.alpha = 0
-        cartContainerViewController.alpha = 1
+        ordersContainerViewConntroller.alpha = 0
         
     }
     
     
     func navigateToSecondTabLeft(){
         
-        tab1Header.text = CheckOutPageTabs.orders.rawValue
-        tab2Header.text = CheckOutPageTabs.information.rawValue
-        tab3Header.text = CheckOutPageTabs.cart.rawValue
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { [weak self] in
+        
+            self!.tab1Header.text = CheckOutPageTabs.orders.rawValue
+            self!.tab2Header.text = CheckOutPageTabs.information.rawValue
+            self!.tab3Header.text = CheckOutPageTabs.cart.rawValue
+        
+        })
         
         
-        cartContainerViewController.alpha = 0
-        ordersContainerViewConntroller.alpha = 1
+        
+        swapContainerViewsLeftSlide(slideOutView: cartContainerViewController, slideInView: ordersContainerViewConntroller)
+        
+        informationContainerViewController.alpha = 0
         
     }
     
     func navigateToThirdTabLeft(){
         
-        tab1Header.text = CheckOutPageTabs.information.rawValue
-        tab2Header.text = CheckOutPageTabs.cart.rawValue
-        tab3Header.text = CheckOutPageTabs.orders.rawValue
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { [weak self] in
+            
+            self!.tab1Header.text = CheckOutPageTabs.information.rawValue
+            self!.tab2Header.text = CheckOutPageTabs.cart.rawValue
+            self!.tab3Header.text = CheckOutPageTabs.orders.rawValue
+            
+        })
         
         
-        ordersContainerViewConntroller.alpha = 0
-        informationContainerViewController.alpha = 1
+        
+        
+        swapContainerViewsLeftSlide(slideOutView: ordersContainerViewConntroller, slideInView: informationContainerViewController)
+        
+        cartContainerViewController.alpha = 0
        
         
     }
     
     func navigateToFirstTabRight(){
         
-        tab1Header.text = CheckOutPageTabs.cart.rawValue
-        tab2Header.text = CheckOutPageTabs.orders.rawValue
-        tab3Header.text = CheckOutPageTabs.information.rawValue
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { [weak self] in
+            
+            self!.tab1Header.text = CheckOutPageTabs.cart.rawValue
+            self!.tab2Header.text = CheckOutPageTabs.orders.rawValue
+            self!.tab3Header.text = CheckOutPageTabs.information.rawValue
+            
+        })
         
-        informationContainerViewController.alpha = 0
-        cartContainerViewController.alpha = 1
+        
+        swapContainerViewsRightSlide(slideOutView: informationContainerViewController, slideInView: cartContainerViewController)
+        
+        ordersContainerViewConntroller.alpha = 0
        
     }
     
     func navigateToSecondTabRight(){
         
-        tab1Header.text = CheckOutPageTabs.information.rawValue
-        tab2Header.text = CheckOutPageTabs.cart.rawValue
-        tab3Header.text = CheckOutPageTabs.orders.rawValue
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { [weak self] in
+            
+            self!.tab1Header.text = CheckOutPageTabs.information.rawValue
+            self!.tab2Header.text = CheckOutPageTabs.cart.rawValue
+            self!.tab3Header.text = CheckOutPageTabs.orders.rawValue
+            
+        })
+       
         
         
-        ordersContainerViewConntroller.alpha = 0
-        informationContainerViewController.alpha = 1
+        swapContainerViewsRightSlide(slideOutView: ordersContainerViewConntroller, slideInView: informationContainerViewController)
+        
+        cartContainerViewController.alpha = 0
         
         
         
@@ -201,14 +230,57 @@ extension CheckOutViewController: CheckOutView{
     
     func navigateToThirdTabRight(){
         
-        tab1Header.text = CheckOutPageTabs.orders.rawValue
-        tab2Header.text = CheckOutPageTabs.information.rawValue
-        tab3Header.text = CheckOutPageTabs.cart.rawValue
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { [weak self] in
+            self!.tab1Header.text = CheckOutPageTabs.orders.rawValue
+            self!.tab2Header.text = CheckOutPageTabs.information.rawValue
+            self!.tab3Header.text = CheckOutPageTabs.cart.rawValue
+            
+        })
         
         
-        cartContainerViewController.alpha = 0
-        ordersContainerViewConntroller.alpha = 1
         
+        swapContainerViewsRightSlide(slideOutView: cartContainerViewController, slideInView: ordersContainerViewConntroller)
+        
+        informationContainerViewController.alpha = 0
+        
+    }
+    
+    
+    func swapContainerViewsLeftSlide(slideOutView: UIView, slideInView: UIView){
+        
+        slideOutView.alpha = 1
+        slideInView.alpha = 1
+        slideInView.center.x += self.view.bounds.width
+        UIView.animateKeyframes(withDuration: 0.5, delay: 0.25, options: .beginFromCurrentState, animations: {
+            slideOutView.center.x -= self.view.bounds.width
+            slideInView.center.x -= self.view.bounds.width
+
+        }, completion: { (finished: Bool) -> Void in
+            slideOutView.alpha = 0
+            slideInView.alpha = 1
+            slideOutView.center.x += self.view.bounds.width
+
+        })
+    
+    }
+    
+    
+    func swapContainerViewsRightSlide(slideOutView: UIView, slideInView: UIView){
+        
+        slideOutView.alpha = 1
+        slideInView.alpha = 1
+        slideInView.center.x -= self.view.bounds.width
+        UIView.animateKeyframes(withDuration: 0.5, delay: 0.1, options: .beginFromCurrentState, animations: {
+            slideOutView.center.x += self.view.bounds.width
+            slideInView.center.x += self.view.bounds.width
+
+        }, completion: { (finished: Bool) -> Void in
+            slideOutView.alpha = 0
+            slideInView.alpha = 1
+            slideOutView.center.x -= self.view.bounds.width
+
+        })
+    
     }
     
    

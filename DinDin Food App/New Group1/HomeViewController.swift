@@ -154,11 +154,11 @@ extension HomeViewController: HomeView{
         scrollView.layoutIfNeeded()
         
         
-        var leftRecognizer = UISwipeGestureRecognizer(target: self, action:
+        let leftRecognizer = UISwipeGestureRecognizer(target: self, action:
         #selector(swipeMade(_:)))
            leftRecognizer.direction = .left
         
-        var rightRecognizer = UISwipeGestureRecognizer(target: self, action:
+        let rightRecognizer = UISwipeGestureRecognizer(target: self, action:
         #selector(swipeMade(_:)))
            rightRecognizer.direction = .right
            self.view.addGestureRecognizer(leftRecognizer)
@@ -279,74 +279,127 @@ extension HomeViewController: HomeView{
     
     func navigateToFirstTabLeft(){
         
-        tabHeader1.text = HomePageTabs.pizza.rawValue
-        tabHeader2.text = HomePageTabs.sushi.rawValue
-        tabHeader3.text = HomePageTabs.drinks.rawValue
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { [weak self] in
+            self!.tabHeader1.text = HomePageTabs.pizza.rawValue
+            self!.tabHeader2.text = HomePageTabs.sushi.rawValue
+            self!.tabHeader3.text = HomePageTabs.drinks.rawValue
+        })
         
-        
-        pizzaContainerViewTab.alpha = 1
-        DrinksContainerViewTab.alpha = 0
+        swapContainerViewsLeftSlide(slideOutView: DrinksContainerViewTab, slideInView: pizzaContainerViewTab)
+        sushiContainerViewTab.alpha = 0
         
     }
     
     
     func navigateToSecondTabLeft(){
         
-        tabHeader1.text = HomePageTabs.sushi.rawValue
-        tabHeader2.text = HomePageTabs.drinks.rawValue
-        tabHeader3.text = HomePageTabs.pizza.rawValue
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { [weak self] in
+            self!.tabHeader1.text = HomePageTabs.sushi.rawValue
+            self!.tabHeader2.text = HomePageTabs.drinks.rawValue
+            self!.tabHeader3.text = HomePageTabs.pizza.rawValue
+        })
         
         
-        pizzaContainerViewTab.alpha = 0
-        sushiContainerViewTab.alpha = 1
+        swapContainerViewsLeftSlide(slideOutView: pizzaContainerViewTab, slideInView: sushiContainerViewTab)
+        DrinksContainerViewTab.alpha = 0
     }
     
     func navigateToThirdTabLeft(){
         
-        tabHeader1.text = HomePageTabs.drinks.rawValue
-        tabHeader2.text = HomePageTabs.pizza.rawValue
-        tabHeader3.text = HomePageTabs.sushi.rawValue
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { [weak self] in
+            self!.tabHeader1.text = HomePageTabs.drinks.rawValue
+            self!.tabHeader2.text = HomePageTabs.pizza.rawValue
+            self!.tabHeader3.text = HomePageTabs.sushi.rawValue
+        })
         
         
-        sushiContainerViewTab.alpha = 0
-        DrinksContainerViewTab.alpha = 1
+        swapContainerViewsLeftSlide(slideOutView: sushiContainerViewTab, slideInView: DrinksContainerViewTab)
+        pizzaContainerViewTab.alpha = 0
         
         
     }
     
     func navigateToFirstTabRight(){
         
-        tabHeader1.text = HomePageTabs.pizza.rawValue
-        tabHeader2.text = HomePageTabs.sushi.rawValue
-        tabHeader3.text = HomePageTabs.drinks.rawValue
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { [weak self] in
+            self!.tabHeader1.text = HomePageTabs.pizza.rawValue
+            self!.tabHeader2.text = HomePageTabs.sushi.rawValue
+            self!.tabHeader3.text = HomePageTabs.drinks.rawValue
+        })
         
-        pizzaContainerViewTab.alpha = 1
-        sushiContainerViewTab.alpha = 0
+        
+        
+        swapContainerViewsRightSlide(slideOutView: sushiContainerViewTab, slideInView: pizzaContainerViewTab)
+        DrinksContainerViewTab.alpha = 0
     }
     
     func navigateToSecondTabRight(){
         
-        tabHeader1.text = HomePageTabs.sushi.rawValue
-        tabHeader2.text = HomePageTabs.drinks.rawValue
-        tabHeader3.text = HomePageTabs.pizza.rawValue
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { [weak self] in
+            self!.tabHeader1.text = HomePageTabs.sushi.rawValue
+            self!.tabHeader2.text = HomePageTabs.drinks.rawValue
+            self!.tabHeader3.text = HomePageTabs.pizza.rawValue
+        })
         
-        sushiContainerViewTab.alpha = 1
-        DrinksContainerViewTab.alpha = 0
+        
+        
+        swapContainerViewsRightSlide(slideOutView: DrinksContainerViewTab, slideInView: sushiContainerViewTab)
+        pizzaContainerViewTab.alpha = 0
         
         
     }
     
     func navigateToThirdTabRight(){
         
-        tabHeader1.text = HomePageTabs.drinks.rawValue
-        tabHeader2.text = HomePageTabs.pizza.rawValue
-        tabHeader3.text = HomePageTabs.sushi.rawValue
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { [weak self] in
+            self!.tabHeader1.text = HomePageTabs.drinks.rawValue
+            self!.tabHeader2.text = HomePageTabs.pizza.rawValue
+            self!.tabHeader3.text = HomePageTabs.sushi.rawValue
+        })
         
     
-        
-        DrinksContainerViewTab.alpha = 1
-        pizzaContainerViewTab.alpha = 0
+        swapContainerViewsRightSlide(slideOutView: pizzaContainerViewTab, slideInView: DrinksContainerViewTab)
+        sushiContainerViewTab.alpha = 0
     }
+    
+    func swapContainerViewsLeftSlide(slideOutView: UIView, slideInView: UIView){
+        
+        slideOutView.alpha = 1
+        slideInView.alpha = 1
+        slideInView.center.x += self.view.bounds.width
+        UIView.animateKeyframes(withDuration: 0.5, delay: 0.25, options: .beginFromCurrentState, animations: {
+            slideOutView.center.x -= self.view.bounds.width
+            slideInView.center.x -= self.view.bounds.width
+
+        }, completion: { (finished: Bool) -> Void in
+            slideOutView.alpha = 0
+            slideInView.alpha = 1
+            slideOutView.center.x += self.view.bounds.width
+
+        })
+    
+    }
+    
+    
+    func swapContainerViewsRightSlide(slideOutView: UIView, slideInView: UIView){
+        
+        slideOutView.alpha = 1
+        slideInView.alpha = 1
+        slideInView.center.x -= self.view.bounds.width
+        UIView.animateKeyframes(withDuration: 0.5, delay: 0.1, options: .beginFromCurrentState, animations: {
+            slideOutView.center.x += self.view.bounds.width
+            slideInView.center.x += self.view.bounds.width
+
+        }, completion: { (finished: Bool) -> Void in
+            slideOutView.alpha = 0
+            slideInView.alpha = 1
+            slideOutView.center.x -= self.view.bounds.width
+
+        })
+    
+    }
+    
+    
      
 }
 
